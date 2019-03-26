@@ -5,8 +5,6 @@ wire clk_4;
 assign GPIO_1[17] = clk_4;
 assign GPIO_1[15] = CLOCK_50;
 
-
-
 clk_4_gen c (CLOCK_50, clk_4);
 //button_input b (clk_4, code);
 //LED_display d (clk_4, code);
