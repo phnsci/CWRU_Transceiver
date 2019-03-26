@@ -1,0 +1,3 @@
+module clock_4k_gen(input clock_50, output clock_4k);
+
+endmodule
