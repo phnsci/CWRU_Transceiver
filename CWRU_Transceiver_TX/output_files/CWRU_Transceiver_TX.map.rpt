@@ -1,6 +1,6 @@
 Analysis & Synthesis report for CWRU_Transceiver_TX
-Tue Mar 26 17:02:05 2019
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Tue Mar 26 17:44:42 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
 ---------------------
@@ -10,20 +10,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,25 +35,20 @@ refer to the applicable agreement for further details.
 
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 26 17:02:05 2019       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; CWRU_Transceiver_TX                         ;
-; Top-level Entity Name           ; CWRU_Transceiver_TX                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 37                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Tue Mar 26 17:44:42 2019               ;
+; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name               ; CWRU_Transceiver_TX                             ;
+; Top-level Entity Name       ; CWRU_Transceiver_TX                             ;
+; Family                      ; Cyclone V                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
+; Total registers             ; N/A until Partition Merge                       ;
+; Total pins                  ; N/A until Partition Merge                       ;
+; Total virtual pins          ; N/A until Partition Merge                       ;
+; Total block memory bits     ; N/A until Partition Merge                       ;
+; Total PLLs                  ; N/A until Partition Merge                       ;
+; Total DLLs                  ; N/A until Partition Merge                       ;
++-----------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -71,7 +60,7 @@ refer to the applicable agreement for further details.
 ; Top-level entity name                                                           ; CWRU_Transceiver_TX ; CWRU_Transceiver_TX ;
 ; Family name                                                                     ; Cyclone V           ; Cyclone V           ;
 ; Use smart compilation                                                           ; Off                 ; Off                 ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                  ; On                  ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                  ; On                  ;
 ; Enable compact report table                                                     ; Off                 ; Off                 ;
 ; Restructure Multiplexers                                                        ; Auto                ; Auto                ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                 ; Off                 ;
@@ -165,188 +154,29 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; src/CWRU_Transceiver_TX.v        ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v ;         ;
-; src/clk_4_gen.v                  ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v           ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimate of Logic utilization (ALMs needed) ; 0      ;
-;                                             ;        ;
-; Combinational ALUT usage for logic          ; 0      ;
-;     -- 7 input functions                    ; 0      ;
-;     -- 6 input functions                    ; 0      ;
-;     -- 5 input functions                    ; 0      ;
-;     -- 4 input functions                    ; 0      ;
-;     -- <=3 input functions                  ; 0      ;
-;                                             ;        ;
-; Dedicated logic registers                   ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 37     ;
-;                                             ;        ;
-; Total DSP Blocks                            ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; clk_50 ;
-; Maximum fan-out                             ; 1      ;
-; Total fan-out                               ; 37     ;
-; Average fan-out                             ; 0.50   ;
-+---------------------------------------------+--------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Entity Name         ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------+---------------------+--------------+
-; |CWRU_Transceiver_TX       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 37   ; 0            ; |CWRU_Transceiver_TX ; CWRU_Transceiver_TX ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 37                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 26 17:01:46 2019
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+    Info: Processing started: Tue Mar 26 17:44:24 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CWRU_Transceiver_TX -c CWRU_Transceiver_TX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/led_display.v
-    Info (12023): Found entity 1: LED_display File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/LED_display.v Line: 1
+    Info (12023): Found entity 1: LED_display File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/LED_display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_tx.v
-    Info (12023): Found entity 1: CWRU_Transceiver_TX File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
+    Info (12023): Found entity 1: CWRU_Transceiver_TX File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/clk_4_gen.v
-    Info (12023): Found entity 1: clk_4_gen File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 1
+    Info (12023): Found entity 1: clk_4_gen File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/button_input.v
-    Info (12023): Found entity 1: button_input File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v Line: 1
-Info (12127): Elaborating entity "CWRU_Transceiver_TX" for the top level hierarchy
-Warning (10034): Output port "GPIO_1[35..18]" at CWRU_Transceiver_TX.v(1) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-Warning (10034): Output port "GPIO_1[16..0]" at CWRU_Transceiver_TX.v(1) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-Info (12128): Elaborating entity "clk_4_gen" for hierarchy "clk_4_gen:c" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 7
-Warning (10230): Verilog HDL assignment warning at clk_4_gen.v(12): truncated value with size 32 to match size of target (1) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 12
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "GPIO_1[0]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[1]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[2]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[3]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[4]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[5]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[6]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[7]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[8]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[9]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[10]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[11]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[12]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[13]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[14]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[15]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[16]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[17]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[18]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[19]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[20]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[21]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[22]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[23]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[24]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[25]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[26]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[27]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[28]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[29]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[30]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[31]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[32]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[33]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[34]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-    Warning (13410): Pin "GPIO_1[35]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not exist in design
-    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE1_SOC -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SOC -section_id Top was ignored
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk_50" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
-Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 36 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
-    Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Tue Mar 26 17:02:05 2019
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:34
+    Info (12023): Found entity 1: button_input File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v Line: 1
+Error (10137): Verilog HDL Procedural Assignment error at CWRU_Transceiver_TX.v(10): object "clk_4" on left-hand side of assignment must have a variable data type File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 10
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4781 megabytes
+    Error: Processing ended: Tue Mar 26 17:44:42 2019
+    Error: Elapsed time: 00:00:18
+    Error: Total CPU time (on all processors): 00:00:42
 
 
