@@ -1,5 +1,5 @@
-Analysis & Synthesis Status : Failed - Tue Mar 26 17:44:42 2019
-Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Analysis & Elaboration Status : Successful - Thu Mar 28 17:31:36 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CWRU_Transceiver_TX
 Top-level Entity Name : CWRU_Transceiver_TX
 Family : Cyclone V

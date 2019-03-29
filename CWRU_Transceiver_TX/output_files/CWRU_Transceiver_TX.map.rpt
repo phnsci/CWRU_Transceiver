@@ -1,23 +1,23 @@
-Analysis & Synthesis report for CWRU_Transceiver_TX
-Tue Mar 26 17:44:42 2019
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Analysis & Elaboration report for CWRU_Transceiver_TX
+Thu Mar 28 17:31:36 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -33,26 +33,42 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Mar 26 17:44:42 2019               ;
-; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
-; Revision Name               ; CWRU_Transceiver_TX                             ;
-; Top-level Entity Name       ; CWRU_Transceiver_TX                             ;
-; Family                      ; Cyclone V                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Mar 28 17:31:36 2019       ;
+; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                 ; CWRU_Transceiver_TX                         ;
+; Top-level Entity Name         ; CWRU_Transceiver_TX                         ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                               ;
+; Analysis & Elaboration Settings                                                                                             ;
 +---------------------------------------------------------------------------------+---------------------+---------------------+
 ; Option                                                                          ; Setting             ; Default Value       ;
 +---------------------------------------------------------------------------------+---------------------+---------------------+
@@ -60,7 +76,7 @@ refer to the applicable agreement for further details.
 ; Top-level entity name                                                           ; CWRU_Transceiver_TX ; CWRU_Transceiver_TX ;
 ; Family name                                                                     ; Cyclone V           ; Cyclone V           ;
 ; Use smart compilation                                                           ; Off                 ; Off                 ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                  ; On                  ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                  ; On                  ;
 ; Enable compact report table                                                     ; Off                 ; Off                 ;
 ; Restructure Multiplexers                                                        ; Auto                ; Auto                ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                 ; Off                 ;
@@ -138,45 +154,62 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+---------------------+---------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Tue Mar 26 17:44:24 2019
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CWRU_Transceiver_TX -c CWRU_Transceiver_TX
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Mar 28 17:31:17 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CWRU_Transceiver_TX -c CWRU_Transceiver_TX --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file src/led_display.v
-    Info (12023): Found entity 1: LED_display File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/LED_display.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/hex_display.v
+    Info (12023): Found entity 1: HEX_display File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_tx.v
-    Info (12023): Found entity 1: CWRU_Transceiver_TX File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
+    Info (12023): Found entity 1: CWRU_Transceiver_TX File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/clk_4_gen.v
-    Info (12023): Found entity 1: clk_4_gen File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 1
+    Info (12023): Found entity 1: clk_4_gen File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/button_input.v
-    Info (12023): Found entity 1: button_input File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v Line: 1
-Error (10137): Verilog HDL Procedural Assignment error at CWRU_Transceiver_TX.v(10): object "clk_4" on left-hand side of assignment must have a variable data type File: D:/eecs398/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 10
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4781 megabytes
-    Error: Processing ended: Tue Mar 26 17:44:42 2019
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:42
+    Info (12023): Found entity 1: button_input File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_tx_tb.v
+    Info (12023): Found entity 1: CWRU_Transceiver_TX_tb File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v Line: 3
+Info (12127): Elaborating entity "CWRU_Transceiver_TX" for the top level hierarchy
+Warning (10034): Output port "GPIO_1[35..18]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+Warning (10034): Output port "GPIO_1[16]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+Warning (10034): Output port "GPIO_1[14..0]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+Info (12128): Elaborating entity "clk_4_gen" for hierarchy "clk_4_gen:c" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 14
+Info (12128): Elaborating entity "button_input" for hierarchy "button_input:b" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 15
+Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:d" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 16
+Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE1_SOC -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SOC -section_id Top was ignored
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Thu Mar 28 17:31:36 2019
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:35
 
 
