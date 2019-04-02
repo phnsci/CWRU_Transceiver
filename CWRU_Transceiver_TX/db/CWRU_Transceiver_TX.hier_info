@@ -40,13 +40,14 @@ GPIO_1[32] <= <GND>
 GPIO_1[33] <= <GND>
 GPIO_1[34] <= <GND>
 GPIO_1[35] <= <GND>
-HEX0[0] <= HEX_display:d.port2
-HEX0[1] <= HEX_display:d.port2
-HEX0[2] <= HEX_display:d.port2
-HEX0[3] <= HEX_display:d.port2
-HEX0[4] <= HEX_display:d.port2
-HEX0[5] <= HEX_display:d.port2
-HEX0[6] <= HEX_display:d.port2
+HEX0[0] <= HEX_display:d.port1
+HEX0[1] <= HEX_display:d.port1
+HEX0[2] <= HEX_display:d.port1
+HEX0[3] <= HEX_display:d.port1
+HEX0[4] <= HEX_display:d.port1
+HEX0[5] <= HEX_display:d.port1
+HEX0[6] <= HEX_display:d.port1
+clk_4_out <= clk_4.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |CWRU_Transceiver_TX|clk_4_gen:c
@@ -122,13 +123,6 @@ code[7] <= code[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |CWRU_Transceiver_TX|HEX_display:d
-clk => HEX0[0]~reg0.CLK
-clk => HEX0[1]~reg0.CLK
-clk => HEX0[2]~reg0.CLK
-clk => HEX0[3]~reg0.CLK
-clk => HEX0[4]~reg0.CLK
-clk => HEX0[5]~reg0.CLK
-clk => HEX0[6]~reg0.CLK
 code[0] => Equal0.IN7
 code[0] => Equal1.IN7
 code[0] => Equal2.IN7
@@ -161,12 +155,12 @@ code[7] => Equal0.IN0
 code[7] => Equal1.IN0
 code[7] => Equal2.IN0
 code[7] => Equal3.IN0
-HEX0[0] <= HEX0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[1] <= HEX0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[2] <= HEX0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[3] <= HEX0[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[4] <= HEX0[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[5] <= HEX0[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[6] <= HEX0[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] <= HEX0[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= <VCC>
+HEX0[6] <= HEX0[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 

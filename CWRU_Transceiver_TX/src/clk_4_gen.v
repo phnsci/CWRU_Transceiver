@@ -3,7 +3,7 @@ module clk_4_gen(
 	output reg clk_out
 	);
 
-reg [15:0] counter; // for reference to 50MHz cycles, resets at 0x30D4 = 12,500
+reg [15:0] counter; // for reference to 50MHz cycles, resets at 0x186A = 6,250
 
 initial
 begin
@@ -14,7 +14,7 @@ end
 always @(posedge clk_in)
 begin
 	counter = counter + 16'h0001;
-	if (counter == 16'h30D4)
+	if (counter == 16'h186A)
 	begin
 		clk_out = ~clk_out;
 		counter = 16'h0000;

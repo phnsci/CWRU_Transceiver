@@ -9,10 +9,10 @@ wire clk_4;
 wire [7:0] code;
 
 assign GPIO_1[17] = clk_4; // GPIO pin 20 outputs the 4kHz clock
-assign GPIO_1[15] = CLOCK_50; // GPIO pin 18 outputs the 50MHz clock	
+assign GPIO_1[15] = CLOCK_50; // GPIO pin 18 outputs the 50MHz clock
 
 clk_4_gen c (CLOCK_50, clk_4);
 button_input b (clk_4, KEY, code);
-HEX_display d (clk_4, code, HEX0);
+HEX_display d (code, HEX0);
 
 endmodule

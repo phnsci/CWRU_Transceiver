@@ -22,7 +22,7 @@ begin
 	#250000 KEY = 4'b1111;
 	#250000 KEY = 4'b0111; // test KEY[3]
 	#250000 KEY = 4'b1111;
-	#250000 $stop;
+	#500000 $stop;
 end
 
 // instantiate the Unit Under Test (UUT)
