@@ -1,7 +1,7 @@
 module clk_4_gen(
 	input clk_in,
 	output reg clk_out
-	);
+);
 
 reg [15:0] counter; // for reference to 50MHz cycles, resets at 0x186A = 6,250
 

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CWRU_Transceiver_TX
-Fri Mar 29 18:13:38 2019
+Thu Apr 04 23:23:28 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Mar 29 18:13:38 2019       ;
+; Analysis & Elaboration Status ; Successful - Thu Apr 04 23:23:28 2019       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; CWRU_Transceiver_TX                         ;
 ; Top-level Entity Name         ; CWRU_Transceiver_TX                         ;
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -160,35 +160,55 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Mar 29 18:13:08 2019
+    Info: Processing started: Thu Apr 04 23:23:18 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CWRU_Transceiver_TX -c CWRU_Transceiver_TX --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/hex_display.v
-    Info (12023): Found entity 1: HEX_display File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 1
+    Info (12023): Found entity 1: HEX_display File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_tx.v
-    Info (12023): Found entity 1: CWRU_Transceiver_TX File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
+    Info (12023): Found entity 1: CWRU_Transceiver_TX File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/clk_4_gen.v
-    Info (12023): Found entity 1: clk_4_gen File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 1
+    Info (12023): Found entity 1: clk_4_gen File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/button_input.v
-    Info (12023): Found entity 1: button_input File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v Line: 1
+    Info (12023): Found entity 1: button_input File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_tx_tb.v
-    Info (12023): Found entity 1: CWRU_Transceiver_TX_tb File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v Line: 3
+    Info (12023): Found entity 1: CWRU_Transceiver_TX_tb File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file src/code_shift.v
+    Info (12023): Found entity 1: code_shift File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 1
 Info (12127): Elaborating entity "CWRU_Transceiver_TX" for the top level hierarchy
-Warning (10034): Output port "GPIO_1[35..18]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-Warning (10034): Output port "GPIO_1[16]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-Warning (10034): Output port "GPIO_1[14..0]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-Info (12128): Elaborating entity "clk_4_gen" for hierarchy "clk_4_gen:c" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 16
-Info (12128): Elaborating entity "button_input" for hierarchy "button_input:b" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 17
-Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:d" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 18
-Warning (10240): Verilog HDL Always Construct warning at HEX_display.v(6): inferring latch(es) for variable "HEX0", which holds its previous value in one or more paths through the always construct File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[0]" at HEX_display.v(6) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[1]" at HEX_display.v(6) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[2]" at HEX_display.v(6) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[3]" at HEX_display.v(6) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[4]" at HEX_display.v(6) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[5]" at HEX_display.v(6) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[6]" at HEX_display.v(6) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
+Warning (10034): Output port "GPIO_1[35..18]" at CWRU_Transceiver_TX.v(12) has no driver File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 12
+Warning (10034): Output port "GPIO_1[16..0]" at CWRU_Transceiver_TX.v(12) has no driver File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 12
+Info (12128): Elaborating entity "clk_4_gen" for hierarchy "clk_4_gen:c" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 25
+Info (12128): Elaborating entity "code_shift" for hierarchy "code_shift:s" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(29): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(29): variable "code" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(31): variable "code" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(37): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(37): variable "shift_flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(39): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(40): variable "code_reg" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 40
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(41): variable "code_reg" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at code_shift.v(46): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 46
+Warning (10240): Verilog HDL Always Construct warning at code_shift.v(25): inferring latch(es) for variable "code_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at code_shift.v(25): inferring latch(es) for variable "shift_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at code_shift.v(25): inferring latch(es) for variable "counter", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at code_shift.v(25): inferring latch(es) for variable "code_MSB", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_MSB" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "counter[0]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "counter[1]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "counter[2]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "shift_flag" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_reg[0]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_reg[1]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_reg[2]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_reg[3]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_reg[4]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_reg[5]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_reg[6]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (10041): Inferred latch for "code_reg[7]" at code_shift.v(25) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v Line: 25
+Info (12128): Elaborating entity "button_input" for hierarchy "button_input:b" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 33
+Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:d" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 35
 Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SOC -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE1_SOC -section_id Top was ignored
@@ -214,10 +234,10 @@ Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not 
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE1_SOC -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE1_SOC -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SOC -section_id Top was ignored
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Fri Mar 29 18:13:39 2019
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:51
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Thu Apr 04 23:23:28 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 
