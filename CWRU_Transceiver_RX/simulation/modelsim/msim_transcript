@@ -1,0 +1,95 @@
+# Reading C:/Intel/QuartusPrimeLite/modelsim_ase/tcl/vsim/pref.tcl
+# do CWRU_Transceiver_RX_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/Intel/QuartusPrimeLite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src {C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:57 on Apr 09,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src" C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v 
+# -- Compiling module shift_sampler
+# 
+# Top level modules:
+# 	shift_sampler
+# End time: 12:38:57 on Apr 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src {C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:57 on Apr 09,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src" C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v 
+# -- Compiling module CWRU_Transceiver_RX
+# 
+# Top level modules:
+# 	CWRU_Transceiver_RX
+# End time: 12:38:57 on Apr 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src {C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:57 on Apr 09,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src" C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v 
+# -- Compiling module clk_40_gen
+# 
+# Top level modules:
+# 	clk_40_gen
+# End time: 12:38:57 on Apr 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src {C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:57 on Apr 09,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src" C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v 
+# -- Compiling module HEX_display
+# 
+# Top level modules:
+# 	HEX_display
+# End time: 12:38:57 on Apr 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src {C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:57 on Apr 09,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src" C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v 
+# -- Compiling module sample_decoder
+# 
+# Top level modules:
+# 	sample_decoder
+# End time: 12:38:57 on Apr 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src {C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:57 on Apr 09,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src" C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX_tb.v 
+# -- Compiling module CWRU_Transceiver_RX_tb
+# 
+# Top level modules:
+# 	CWRU_Transceiver_RX_tb
+# End time: 12:38:57 on Apr 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  CWRU_Transceiver_RX_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" CWRU_Transceiver_RX_tb 
+# Start time: 12:38:57 on Apr 09,2019
+# Loading work.CWRU_Transceiver_RX_tb
+# Loading work.CWRU_Transceiver_RX
+# Loading work.clk_40_gen
+# Loading work.shift_sampler
+# Loading work.sample_decoder
+# Loading work.HEX_display
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX_tb.v(51)
+#    Time: 6 ms  Iteration: 0  Instance: /CWRU_Transceiver_RX_tb
+# Break in Module CWRU_Transceiver_RX_tb at C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX_tb.v line 51
+# End time: 12:40:50 on Apr 09,2019, Elapsed time: 0:01:53
+# Errors: 0, Warnings: 0

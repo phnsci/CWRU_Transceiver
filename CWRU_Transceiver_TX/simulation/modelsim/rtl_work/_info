@@ -8,24 +8,24 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/simulation/modelsim
-vbutton_input
-Z1 !s110 1554434616
+vbutton_encoder
+Z1 !s110 1554827215
 !i10b 1
-!s100 Y[T@T6^O?3ge2N:QR=<4`1
-I^k5fR5oY_4gazP=a?2@]=0
+!s100 ojK88CHVO7P`IEN9_e7A60
+Igfk4Rj=@0Q83cVV>KlO0`1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1554410994
-8C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v
-FC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v
+w1554825090
+8C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v
+FC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v
 L0 1
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1554434616.000000
-!s107 C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src|C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_input.v|
+Z4 !s108 1554827215.000000
+!s107 C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src|C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v|
 !i113 1
 Z5 o-vlog01compat -work work
 Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src
@@ -37,7 +37,7 @@ R1
 I6I_:ZBcL>kTkD3`oK8ODA1
 R2
 R0
-w1554395290
+w1554827099
 8C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v
 FC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v
 L0 1
@@ -52,24 +52,24 @@ R4
 R5
 R6
 R7
-vcode_shift
+vcode_shifter
 R1
 !i10b 1
-!s100 nT[EG?cCR[Y8M1=f9F>e53
-IDnIGRTfYGW@8X7:bA_:JB3
+!s100 WAbdoALB3bYkTeN1^Q7?d3
+Io8dAl=DUa6VHmeZm7HmE00
 R2
 R0
-w1554434359
-8C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v
-FC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v
+w1554825319
+8C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v
+FC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src|C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shift.v|
+!s107 C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src|C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v|
 !i113 1
 R5
 R6
@@ -77,11 +77,11 @@ R7
 vCWRU_Transceiver_TX
 R1
 !i10b 1
-!s100 :eQ6OCHjN9gmV1jK_CXkg1
-IXUe1K[<3NQ0^UJX]BlmgE0
+!s100 =]4hN3]WT_1T8^;NhK?hD1
+I]GbWffV_1;0FX_:zfVH3z2
 R2
 R0
-w1554434569
+w1554568219
 8C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v
 FC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v
 L0 1
@@ -89,7 +89,7 @@ R3
 r1
 !s85 0
 31
-Z8 !s108 1554434615.000000
+R4
 !s107 C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src|C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v|
 !i113 1
@@ -98,13 +98,13 @@ R6
 R7
 n@c@w@r@u_@transceiver_@t@x
 vCWRU_Transceiver_TX_tb
-R1
+!s110 1554827216
 !i10b 1
-!s100 N86;TF9U1@fiN^E76F?nD0
-IbaYdNm8HTHlcWE5GnS4?m0
+!s100 FdMUGF[YenWMICo=[gc@?2
+I?MLlMh9]4YIPTc3]1`m6=1
 R2
 R0
-w1554434585
+w1554568104
 8C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v
 FC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v
 L0 3
@@ -121,13 +121,13 @@ R6
 R7
 n@c@w@r@u_@transceiver_@t@x_tb
 vHEX_display
-!s110 1554434615
+R1
 !i10b 1
-!s100 0;fnThCdkUSc7i3dK6GLg2
-IHhL4d;RmkWZgSdFX@g@lV2
+!s100 zaJPfzWAaHD>2Who;bVG_0
+I5Qg?TJai96ninPhn::JHJ0
 R2
 R0
-w1554433615
+w1554825082
 8C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v
 FC:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v
 L0 1
@@ -135,7 +135,7 @@ R3
 r1
 !s85 0
 31
-R8
+R4
 !s107 C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src|C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v|
 !i113 1

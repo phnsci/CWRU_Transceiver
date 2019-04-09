@@ -13,8 +13,6 @@ begin
 		HEX0 = 7'b0100100; // display '2'
 	else if (code == 8'b10101010)
 		HEX0 = 7'b0110000; // display '3'
-	else
-		HEX0 = 7'b1111111; // display blank
 end
 
 endmodule

@@ -2,24 +2,18 @@
 
 module CWRU_Transceiver_TX_tb();
 
-// input to the UUT are reg type
+// inputs to the UUT are reg type
 reg CLK;
 reg [3:0] KEY;
 
-// output of the UUT are wire type
-wire clk_4_out;
-wire code_MSB_out;
-wire [7:0] code_reg; // code register
-wire [2:0] counter; // counter to reset at 8
-wire shift_flag; // to control code input flow
+// outputs of the UUT are wire type
 wire [35:0] GPIO_1;
 wire [6:0] HEX0;
 
 // instantiate the Unit Under Test (UUT)
-CWRU_Transceiver_TX UUT(clk_4_out, code_MSB_out, code_reg, counter, shift_flag, CLK, KEY, GPIO_1, HEX0);
+CWRU_Transceiver_TX UUT(CLK, KEY, GPIO_1, HEX0);
 
-initial
-begin
+initial begin
 	CLK = 1'b0;
 	KEY = 4'b1111;
 	

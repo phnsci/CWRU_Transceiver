@@ -1,0 +1,4 @@
+module clk_40_gen(
+	input clk_in,
+	output clk_out
+);

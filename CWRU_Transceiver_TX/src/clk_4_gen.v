@@ -14,7 +14,7 @@ end
 always @(posedge clk_in)
 begin
 	counter = counter + 16'h0001;
-	if (counter == 16'h186A)
+	if (counter == 16'h186A)	
 	begin
 		clk_out = ~clk_out;
 		counter = 16'h0000;
