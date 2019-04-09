@@ -2,148 +2,100 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -5.392
-TNS   : -57.611
+Type  : Slow 1100mV 85C Model Setup 'clk_4_gen:c|clk_out'
+Slack : -6.066
+TNS   : -257.856
 
-Type  : Slow 1100mV 85C Model Setup 'button_encoder:b|code[7]'
-Slack : -4.514
-TNS   : -127.249
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.732
+TNS   : -55.541
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.399
+Slack : 0.595
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'button_encoder:b|code[7]'
-Slack : 0.535
+Type  : Slow 1100mV 85C Model Hold 'clk_4_gen:c|clk_out'
+Slack : 0.740
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Recovery 'button_encoder:b|code[7]'
-Slack : -7.278
-TNS   : -214.751
-
-Type  : Slow 1100mV 85C Model Removal 'button_encoder:b|code[7]'
-Slack : 1.008
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.426
-TNS   : -9.135
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_4_gen:c|clk_out'
 Slack : -0.394
-TNS   : -2.194
+TNS   : -28.337
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'button_encoder:b|code[7]'
-Slack : 0.100
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -9.090
+
+Type  : Slow 1100mV 0C Model Setup 'clk_4_gen:c|clk_out'
+Slack : -5.993
+TNS   : -254.705
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -5.527
-TNS   : -58.967
-
-Type  : Slow 1100mV 0C Model Setup 'button_encoder:b|code[7]'
-Slack : -4.522
-TNS   : -128.675
+Slack : -4.893
+TNS   : -56.741
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.397
+Slack : 0.567
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'button_encoder:b|code[7]'
-Slack : 0.404
+Type  : Slow 1100mV 0C Model Hold 'clk_4_gen:c|clk_out'
+Slack : 0.696
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Recovery 'button_encoder:b|code[7]'
-Slack : -7.274
-TNS   : -214.820
-
-Type  : Slow 1100mV 0C Model Removal 'button_encoder:b|code[7]'
-Slack : 1.025
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.455
-TNS   : -9.801
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_4_gen:c|clk_out'
 Slack : -0.394
-TNS   : -2.149
+TNS   : -28.098
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'button_encoder:b|code[7]'
-Slack : 0.146
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -9.877
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.215
-TNS   : -25.304
+Slack : -3.145
+TNS   : -25.789
 
-Type  : Fast 1100mV 85C Model Setup 'button_encoder:b|code[7]'
-Slack : -2.308
-TNS   : -57.690
+Type  : Fast 1100mV 85C Model Setup 'clk_4_gen:c|clk_out'
+Slack : -3.095
+TNS   : -128.755
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.214
+Slack : 0.325
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'button_encoder:b|code[7]'
-Slack : 0.263
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'button_encoder:b|code[7]'
-Slack : -3.796
-TNS   : -110.248
-
-Type  : Fast 1100mV 85C Model Removal 'button_encoder:b|code[7]'
-Slack : 0.433
+Type  : Fast 1100mV 85C Model Hold 'clk_4_gen:c|clk_out'
+Slack : 0.350
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.480
-TNS   : -2.015
+Slack : -0.413
+TNS   : -1.889
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_4_gen:c|clk_out'
-Slack : 0.029
+Slack : 0.007
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'button_encoder:b|code[7]'
-Slack : 0.195
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Setup 'clk_4_gen:c|clk_out'
+Slack : -2.811
+TNS   : -116.780
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.763
-TNS   : -22.462
-
-Type  : Fast 1100mV 0C Model Setup 'button_encoder:b|code[7]'
-Slack : -2.051
-TNS   : -50.899
+Slack : -2.663
+TNS   : -22.604
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.200
+Slack : 0.294
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'button_encoder:b|code[7]'
-Slack : 0.260
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'button_encoder:b|code[7]'
-Slack : -3.401
-TNS   : -98.671
-
-Type  : Fast 1100mV 0C Model Removal 'button_encoder:b|code[7]'
-Slack : 0.434
+Type  : Fast 1100mV 0C Model Hold 'clk_4_gen:c|clk_out'
+Slack : 0.320
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.478
-TNS   : -1.977
+Slack : -0.421
+TNS   : -1.903
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_4_gen:c|clk_out'
-Slack : 0.061
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'button_encoder:b|code[7]'
-Slack : 0.256
+Slack : 0.039
 TNS   : 0.000
 
 ------------------------------------------------------------

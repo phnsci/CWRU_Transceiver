@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Apr 09 12:42:10 2019
+Fitter Status : Successful - Tue Apr 09 16:23:49 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CWRU_Transceiver_RX
 Top-level Entity Name : CWRU_Transceiver_RX
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 210 / 32,070 ( < 1 % )
-Total registers : 8
+Logic utilization (in ALMs) : 190 / 32,070 ( < 1 % )
+Total registers : 134
 Total pins : 44 / 457 ( 10 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

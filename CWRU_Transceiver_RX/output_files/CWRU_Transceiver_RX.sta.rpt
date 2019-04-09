@@ -1,5 +1,5 @@
 Timing Analyzer report for CWRU_Transceiver_RX
-Tue Apr 09 12:42:26 2019
+Tue Apr 09 16:24:30 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,13 +46,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  38. Signal Integrity Metrics (Fast 1100mv 85c Model)
  39. Setup Transfers
  40. Hold Transfers
- 41. Recovery Transfers
- 42. Removal Transfers
- 43. Report TCCS
- 44. Report RSKM
- 45. Unconstrained Paths Summary
- 46. Clock Status Summary
- 47. Unconstrained Output Ports
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Unconstrained Input Ports
  48. Unconstrained Output Ports
  49. Timing Analyzer Messages
 
@@ -97,16 +97,14 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.32        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.16        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  10.8%      ;
-;     Processor 3            ;  10.6%      ;
-;     Processor 4            ;  10.5%      ;
+;     Processor 2            ;  16.2%      ;
 +----------------------------+-------------+
 
 
@@ -115,19 +113,20 @@ refer to the applicable agreement for further details.
 +-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
 ; Clock Name                  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                         ;
 +-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
-; GPIO_1[17]                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { GPIO_1[17] }                  ;
+; clk_40_gen:c|clk_out        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_40_gen:c|clk_out }        ;
+; CLOCK_50                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }                    ;
 ; shift_sampler:s|sample_flag ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { shift_sampler:s|sample_flag } ;
 +-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
 
 
-+------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                               ;
-+-----------+-----------------+-----------------------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name                  ; Note ;
-+-----------+-----------------+-----------------------------+------+
-; 83.6 MHz  ; 83.6 MHz        ; shift_sampler:s|sample_flag ;      ;
-; 84.37 MHz ; 84.37 MHz       ; GPIO_1[17]                  ;      ;
-+-----------+-----------------+-----------------------------+------+
++------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                         ;
++------------+-----------------+----------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name           ; Note ;
++------------+-----------------+----------------------+------+
+; 144.74 MHz ; 144.74 MHz      ; clk_40_gen:c|clk_out ;      ;
+; 165.59 MHz ; 165.59 MHz      ; CLOCK_50             ;      ;
++------------+-----------------+----------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -137,14 +136,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+-------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                   ;
-+-----------------------------+---------+---------------+
-; Clock                       ; Slack   ; End Point TNS ;
-+-----------------------------+---------+---------------+
-; shift_sampler:s|sample_flag ; -14.376 ; -1096.261     ;
-; GPIO_1[17]                  ; -10.852 ; -681.660      ;
-+-----------------------------+---------+---------------+
++------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                  ;
++-----------------------------+--------+---------------+
+; Clock                       ; Slack  ; End Point TNS ;
++-----------------------------+--------+---------------+
+; clk_40_gen:c|clk_out        ; -5.909 ; -610.553      ;
+; CLOCK_50                    ; -5.039 ; -41.974       ;
+; shift_sampler:s|sample_flag ; -3.567 ; -27.467       ;
++-----------------------------+--------+---------------+
 
 
 +-----------------------------------------------------+
@@ -152,29 +152,22 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; GPIO_1[17]                  ; 0.794 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 0.843 ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.407 ; 0.000         ;
+; shift_sampler:s|sample_flag ; 0.464 ; 0.000         ;
+; CLOCK_50                    ; 0.615 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
-+-------------------------------------------------------+
-; Slow 1100mV 85C Model Recovery Summary                ;
-+-----------------------------+---------+---------------+
-; Clock                       ; Slack   ; End Point TNS ;
-+-----------------------------+---------+---------------+
-; shift_sampler:s|sample_flag ; -14.962 ; -460.891      ;
-; GPIO_1[17]                  ; -11.438 ; -348.123      ;
-+-----------------------------+---------+---------------+
+------------------------------------------
+; Slow 1100mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
 
 
-+-----------------------------------------------------+
-; Slow 1100mV 85C Model Removal Summary               ;
-+-----------------------------+-------+---------------+
-; Clock                       ; Slack ; End Point TNS ;
-+-----------------------------+-------+---------------+
-; GPIO_1[17]                  ; 1.482 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 5.115 ; 0.000         ;
-+-----------------------------+-------+---------------+
+-----------------------------------------
+; Slow 1100mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
 
 
 +------------------------------------------------------+
@@ -182,8 +175,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; GPIO_1[17]                  ; -0.635 ; -108.830      ;
-; shift_sampler:s|sample_flag ; -0.583 ; -8.824        ;
+; clk_40_gen:c|clk_out        ; -0.394 ; -66.207       ;
+; CLOCK_50                    ; -0.394 ; -6.972        ;
+; shift_sampler:s|sample_flag ; -0.394 ; -4.421        ;
 +-----------------------------+--------+---------------+
 
 
@@ -193,25 +187,26 @@ HTML report is unavailable in plain text report export.
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                ;
-+-----------+-----------------+-----------------------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name                  ; Note ;
-+-----------+-----------------+-----------------------------+------+
-; 85.04 MHz ; 85.04 MHz       ; shift_sampler:s|sample_flag ;      ;
-; 85.84 MHz ; 85.84 MHz       ; GPIO_1[17]                  ;      ;
-+-----------+-----------------+-----------------------------+------+
++------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                          ;
++------------+-----------------+----------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name           ; Note ;
++------------+-----------------+----------------------+------+
+; 144.01 MHz ; 144.01 MHz      ; clk_40_gen:c|clk_out ;      ;
+; 159.9 MHz  ; 159.9 MHz       ; CLOCK_50             ;      ;
++------------+-----------------+----------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-------------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary                    ;
-+-----------------------------+---------+---------------+
-; Clock                       ; Slack   ; End Point TNS ;
-+-----------------------------+---------+---------------+
-; shift_sampler:s|sample_flag ; -14.141 ; -1067.491     ;
-; GPIO_1[17]                  ; -10.649 ; -659.151      ;
-+-----------------------------+---------+---------------+
++------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                   ;
++-----------------------------+--------+---------------+
+; Clock                       ; Slack  ; End Point TNS ;
++-----------------------------+--------+---------------+
+; clk_40_gen:c|clk_out        ; -5.944 ; -609.103      ;
+; CLOCK_50                    ; -5.254 ; -42.866       ;
+; shift_sampler:s|sample_flag ; -3.650 ; -27.868       ;
++-----------------------------+--------+---------------+
 
 
 +-----------------------------------------------------+
@@ -219,29 +214,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; GPIO_1[17]                  ; 0.508 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 0.955 ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.376 ; 0.000         ;
+; shift_sampler:s|sample_flag ; 0.517 ; 0.000         ;
+; CLOCK_50                    ; 0.589 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
-+-------------------------------------------------------+
-; Slow 1100mV 0C Model Recovery Summary                 ;
-+-----------------------------+---------+---------------+
-; Clock                       ; Slack   ; End Point TNS ;
-+-----------------------------+---------+---------------+
-; shift_sampler:s|sample_flag ; -14.612 ; -449.266      ;
-; GPIO_1[17]                  ; -11.120 ; -337.522      ;
-+-----------------------------+---------+---------------+
+-----------------------------------------
+; Slow 1100mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
 
 
-+-----------------------------------------------------+
-; Slow 1100mV 0C Model Removal Summary                ;
-+-----------------------------+-------+---------------+
-; Clock                       ; Slack ; End Point TNS ;
-+-----------------------------+-------+---------------+
-; GPIO_1[17]                  ; 1.299 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 4.901 ; 0.000         ;
-+-----------------------------+-------+---------------+
+----------------------------------------
+; Slow 1100mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
 
 
 +------------------------------------------------------+
@@ -249,8 +237,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; GPIO_1[17]                  ; -0.594 ; -86.962       ;
-; shift_sampler:s|sample_flag ; -0.517 ; -7.084        ;
+; CLOCK_50                    ; -0.410 ; -7.463        ;
+; clk_40_gen:c|clk_out        ; -0.394 ; -64.566       ;
+; shift_sampler:s|sample_flag ; -0.394 ; -4.279        ;
 +-----------------------------+--------+---------------+
 
 
@@ -265,8 +254,9 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; shift_sampler:s|sample_flag ; -9.110 ; -699.982      ;
-; GPIO_1[17]                  ; -6.809 ; -431.730      ;
+; CLOCK_50                    ; -4.032 ; -19.062       ;
+; clk_40_gen:c|clk_out        ; -3.188 ; -317.190      ;
+; shift_sampler:s|sample_flag ; -1.920 ; -13.790       ;
 +-----------------------------+--------+---------------+
 
 
@@ -275,29 +265,22 @@ No synchronizer chains to report.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; shift_sampler:s|sample_flag ; 0.294 ; 0.000         ;
-; GPIO_1[17]                  ; 0.448 ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.093 ; 0.000         ;
+; shift_sampler:s|sample_flag ; 0.178 ; 0.000         ;
+; CLOCK_50                    ; 0.332 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 85C Model Recovery Summary               ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; shift_sampler:s|sample_flag ; -9.098 ; -280.257      ;
-; GPIO_1[17]                  ; -6.797 ; -206.625      ;
-+-----------------------------+--------+---------------+
+------------------------------------------
+; Fast 1100mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
 
 
-+-----------------------------------------------------+
-; Fast 1100mV 85C Model Removal Summary               ;
-+-----------------------------+-------+---------------+
-; Clock                       ; Slack ; End Point TNS ;
-+-----------------------------+-------+---------------+
-; GPIO_1[17]                  ; 0.534 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 2.968 ; 0.000         ;
-+-----------------------------+-------+---------------+
+-----------------------------------------
+; Fast 1100mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
 
 
 +------------------------------------------------------+
@@ -305,8 +288,9 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; GPIO_1[17]                  ; -0.796 ; -190.003      ;
-; shift_sampler:s|sample_flag ; -0.327 ; -8.541        ;
+; CLOCK_50                    ; -0.438 ; -1.590        ;
+; shift_sampler:s|sample_flag ; -0.009 ; -0.009        ;
+; clk_40_gen:c|clk_out        ; 0.000  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -321,8 +305,9 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; shift_sampler:s|sample_flag ; -8.185 ; -630.206      ;
-; GPIO_1[17]                  ; -5.924 ; -367.987      ;
+; CLOCK_50                    ; -3.388 ; -17.193       ;
+; clk_40_gen:c|clk_out        ; -2.844 ; -285.505      ;
+; shift_sampler:s|sample_flag ; -1.777 ; -12.930       ;
 +-----------------------------+--------+---------------+
 
 
@@ -331,29 +316,22 @@ No synchronizer chains to report.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; GPIO_1[17]                  ; 0.254 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 0.344 ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.062 ; 0.000         ;
+; shift_sampler:s|sample_flag ; 0.183 ; 0.000         ;
+; CLOCK_50                    ; 0.298 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 0C Model Recovery Summary                ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; shift_sampler:s|sample_flag ; -8.236 ; -253.365      ;
-; GPIO_1[17]                  ; -5.975 ; -181.013      ;
-+-----------------------------+--------+---------------+
+-----------------------------------------
+; Fast 1100mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
 
 
-+-----------------------------------------------------+
-; Fast 1100mV 0C Model Removal Summary                ;
-+-----------------------------+-------+---------------+
-; Clock                       ; Slack ; End Point TNS ;
-+-----------------------------+-------+---------------+
-; GPIO_1[17]                  ; 0.283 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 2.679 ; 0.000         ;
-+-----------------------------+-------+---------------+
+----------------------------------------
+; Fast 1100mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
 
 
 +------------------------------------------------------+
@@ -361,8 +339,9 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; GPIO_1[17]                  ; -0.656 ; -154.611      ;
-; shift_sampler:s|sample_flag ; -0.248 ; -1.850        ;
+; CLOCK_50                    ; -0.464 ; -1.614        ;
+; shift_sampler:s|sample_flag ; 0.002  ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.040  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -372,18 +351,20 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                         ;
-+------------------------------+-----------+-------+----------+---------+---------------------+
-; Clock                        ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack             ; -14.376   ; 0.254 ; -14.962  ; 0.283   ; -0.796              ;
-;  GPIO_1[17]                  ; -10.852   ; 0.254 ; -11.438  ; 0.283   ; -0.796              ;
-;  shift_sampler:s|sample_flag ; -14.376   ; 0.294 ; -14.962  ; 2.679   ; -0.583              ;
-; Design-wide TNS              ; -1777.921 ; 0.0   ; -809.014 ; 0.0     ; -198.544            ;
-;  GPIO_1[17]                  ; -681.660  ; 0.000 ; -348.123 ; 0.000   ; -190.003            ;
-;  shift_sampler:s|sample_flag ; -1096.261 ; 0.000 ; -460.891 ; 0.000   ; -8.824              ;
-+------------------------------+-----------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                        ;
++------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                        ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack             ; -5.944   ; 0.062 ; N/A      ; N/A     ; -0.464              ;
+;  CLOCK_50                    ; -5.254   ; 0.298 ; N/A      ; N/A     ; -0.464              ;
+;  clk_40_gen:c|clk_out        ; -5.944   ; 0.062 ; N/A      ; N/A     ; -0.394              ;
+;  shift_sampler:s|sample_flag ; -3.650   ; 0.178 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS              ; -679.994 ; 0.0   ; 0.0      ; 0.0     ; -77.6               ;
+;  CLOCK_50                    ; -42.866  ; 0.000 ; N/A      ; N/A     ; -7.463              ;
+;  clk_40_gen:c|clk_out        ; -610.553 ; 0.000 ; N/A      ; N/A     ; -66.207             ;
+;  shift_sampler:s|sample_flag ; -27.868  ; 0.000 ; N/A      ; N/A     ; -4.421              ;
++------------------------------+----------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -406,7 +387,6 @@ No synchronizer chains to report.
 +------------+--------------+-----------------+-----------------+
 ; Pin        ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +------------+--------------+-----------------+-----------------+
-; CLOCK_50   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -422,8 +402,8 @@ No synchronizer chains to report.
 ; GPIO_1[12] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[13] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[14] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; GPIO_1[15] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[16] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; GPIO_1[17] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[18] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[19] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[20] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -442,7 +422,8 @@ No synchronizer chains to report.
 ; GPIO_1[33] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[34] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; GPIO_1[35] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; GPIO_1[17] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; GPIO_1[15] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK_50   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +------------+--------------+-----------------+-----------------+
 
 
@@ -511,10 +492,11 @@ No synchronizer chains to report.
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
-; GPIO_1[17]                  ; GPIO_1[17]                  ; 0        ; 0        ; 80       ; 608      ;
-; shift_sampler:s|sample_flag ; GPIO_1[17]                  ; 0        ; 0        ; 0        ; 528      ;
-; GPIO_1[17]                  ; shift_sampler:s|sample_flag ; 0        ; 0        ; 80       ; 1328     ;
-; shift_sampler:s|sample_flag ; shift_sampler:s|sample_flag ; 0        ; 0        ; 0        ; 1248     ;
+; clk_40_gen:c|clk_out        ; clk_40_gen:c|clk_out        ; 61953    ; 0        ; 0        ; 0        ;
+; shift_sampler:s|sample_flag ; clk_40_gen:c|clk_out        ; 628      ; 628      ; 0        ; 0        ;
+; clk_40_gen:c|clk_out        ; CLOCK_50                    ; 1        ; 1        ; 0        ; 0        ;
+; CLOCK_50                    ; CLOCK_50                    ; 1092     ; 0        ; 0        ; 0        ;
+; clk_40_gen:c|clk_out        ; shift_sampler:s|sample_flag ; 0        ; 0        ; 720      ; 0        ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -524,36 +506,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
-; GPIO_1[17]                  ; GPIO_1[17]                  ; 0        ; 0        ; 80       ; 608      ;
-; shift_sampler:s|sample_flag ; GPIO_1[17]                  ; 0        ; 0        ; 0        ; 528      ;
-; GPIO_1[17]                  ; shift_sampler:s|sample_flag ; 0        ; 0        ; 80       ; 1328     ;
-; shift_sampler:s|sample_flag ; shift_sampler:s|sample_flag ; 0        ; 0        ; 0        ; 1248     ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Recovery Transfers                                                                                    ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-; GPIO_1[17]                  ; GPIO_1[17]                  ; 0        ; 0        ; 608      ; 19104    ;
-; shift_sampler:s|sample_flag ; GPIO_1[17]                  ; 0        ; 0        ; 608      ; 19104    ;
-; GPIO_1[17]                  ; shift_sampler:s|sample_flag ; 0        ; 0        ; 608      ; 19104    ;
-; shift_sampler:s|sample_flag ; shift_sampler:s|sample_flag ; 0        ; 0        ; 608      ; 19104    ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Removal Transfers                                                                                     ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-; GPIO_1[17]                  ; GPIO_1[17]                  ; 0        ; 0        ; 608      ; 19104    ;
-; shift_sampler:s|sample_flag ; GPIO_1[17]                  ; 0        ; 0        ; 608      ; 19104    ;
-; GPIO_1[17]                  ; shift_sampler:s|sample_flag ; 0        ; 0        ; 608      ; 19104    ;
-; shift_sampler:s|sample_flag ; shift_sampler:s|sample_flag ; 0        ; 0        ; 608      ; 19104    ;
+; clk_40_gen:c|clk_out        ; clk_40_gen:c|clk_out        ; 61953    ; 0        ; 0        ; 0        ;
+; shift_sampler:s|sample_flag ; clk_40_gen:c|clk_out        ; 628      ; 628      ; 0        ; 0        ;
+; clk_40_gen:c|clk_out        ; CLOCK_50                    ; 1        ; 1        ; 0        ; 0        ;
+; CLOCK_50                    ; CLOCK_50                    ; 1092     ; 0        ; 0        ; 0        ;
+; clk_40_gen:c|clk_out        ; shift_sampler:s|sample_flag ; 0        ; 0        ; 720      ; 0        ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -577,8 +534,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 113   ; 113  ;
 ; Unconstrained Output Ports      ; 6     ; 6    ;
 ; Unconstrained Output Port Paths ; 6     ; 6    ;
 +---------------------------------+-------+------+
@@ -589,9 +546,19 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-----------------------------+-----------------------------+------+-------------+
 ; Target                      ; Clock                       ; Type ; Status      ;
 +-----------------------------+-----------------------------+------+-------------+
-; GPIO_1[17]                  ; GPIO_1[17]                  ; Base ; Constrained ;
+; CLOCK_50                    ; CLOCK_50                    ; Base ; Constrained ;
+; clk_40_gen:c|clk_out        ; clk_40_gen:c|clk_out        ; Base ; Constrained ;
 ; shift_sampler:s|sample_flag ; shift_sampler:s|sample_flag ; Base ; Constrained ;
 +-----------------------------+-----------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; GPIO_1[15] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -606,6 +573,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; GPIO_1[15] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -628,7 +604,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 09 12:42:20 2019
+    Info: Processing started: Tue Apr 09 16:24:12 2019
 Info: Command: quartus_sta CWRU_Transceiver_RX -c CWRU_Transceiver_RX
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not exist in design
@@ -657,14 +633,15 @@ Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not 
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE1_SOC -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SOC -section_id Top was ignored
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 119 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 6 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'CWRU_Transceiver_RX.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name GPIO_1[17] GPIO_1[17]
+    Info (332105): create_clock -period 1.000 -name clk_40_gen:c|clk_out clk_40_gen:c|clk_out
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
     Info (332105): create_clock -period 1.000 -name shift_sampler:s|sample_flag shift_sampler:s|sample_flag
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -672,128 +649,108 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -14.376
+Info (332146): Worst-case setup slack is -5.909
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.376           -1096.261 shift_sampler:s|sample_flag 
-    Info (332119):   -10.852            -681.660 GPIO_1[17] 
-Info (332146): Worst-case hold slack is 0.794
+    Info (332119):    -5.909            -610.553 clk_40_gen:c|clk_out 
+    Info (332119):    -5.039             -41.974 CLOCK_50 
+    Info (332119):    -3.567             -27.467 shift_sampler:s|sample_flag 
+Info (332146): Worst-case hold slack is 0.407
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.794               0.000 GPIO_1[17] 
-    Info (332119):     0.843               0.000 shift_sampler:s|sample_flag 
-Info (332146): Worst-case recovery slack is -14.962
+    Info (332119):     0.407               0.000 clk_40_gen:c|clk_out 
+    Info (332119):     0.464               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.615               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.962            -460.891 shift_sampler:s|sample_flag 
-    Info (332119):   -11.438            -348.123 GPIO_1[17] 
-Info (332146): Worst-case removal slack is 1.482
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     1.482               0.000 GPIO_1[17] 
-    Info (332119):     5.115               0.000 shift_sampler:s|sample_flag 
-Info (332146): Worst-case minimum pulse width slack is -0.635
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.635            -108.830 GPIO_1[17] 
-    Info (332119):    -0.583              -8.824 shift_sampler:s|sample_flag 
+    Info (332119):    -0.394             -66.207 clk_40_gen:c|clk_out 
+    Info (332119):    -0.394              -6.972 CLOCK_50 
+    Info (332119):    -0.394              -4.421 shift_sampler:s|sample_flag 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -14.141
+Info (332146): Worst-case setup slack is -5.944
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.141           -1067.491 shift_sampler:s|sample_flag 
-    Info (332119):   -10.649            -659.151 GPIO_1[17] 
-Info (332146): Worst-case hold slack is 0.508
+    Info (332119):    -5.944            -609.103 clk_40_gen:c|clk_out 
+    Info (332119):    -5.254             -42.866 CLOCK_50 
+    Info (332119):    -3.650             -27.868 shift_sampler:s|sample_flag 
+Info (332146): Worst-case hold slack is 0.376
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.508               0.000 GPIO_1[17] 
-    Info (332119):     0.955               0.000 shift_sampler:s|sample_flag 
-Info (332146): Worst-case recovery slack is -14.612
+    Info (332119):     0.376               0.000 clk_40_gen:c|clk_out 
+    Info (332119):     0.517               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.589               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.410
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.612            -449.266 shift_sampler:s|sample_flag 
-    Info (332119):   -11.120            -337.522 GPIO_1[17] 
-Info (332146): Worst-case removal slack is 1.299
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     1.299               0.000 GPIO_1[17] 
-    Info (332119):     4.901               0.000 shift_sampler:s|sample_flag 
-Info (332146): Worst-case minimum pulse width slack is -0.594
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.594             -86.962 GPIO_1[17] 
-    Info (332119):    -0.517              -7.084 shift_sampler:s|sample_flag 
+    Info (332119):    -0.410              -7.463 CLOCK_50 
+    Info (332119):    -0.394             -64.566 clk_40_gen:c|clk_out 
+    Info (332119):    -0.394              -4.279 shift_sampler:s|sample_flag 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.110
+Info (332146): Worst-case setup slack is -4.032
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.110            -699.982 shift_sampler:s|sample_flag 
-    Info (332119):    -6.809            -431.730 GPIO_1[17] 
-Info (332146): Worst-case hold slack is 0.294
+    Info (332119):    -4.032             -19.062 CLOCK_50 
+    Info (332119):    -3.188            -317.190 clk_40_gen:c|clk_out 
+    Info (332119):    -1.920             -13.790 shift_sampler:s|sample_flag 
+Info (332146): Worst-case hold slack is 0.093
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.294               0.000 shift_sampler:s|sample_flag 
-    Info (332119):     0.448               0.000 GPIO_1[17] 
-Info (332146): Worst-case recovery slack is -9.098
+    Info (332119):     0.093               0.000 clk_40_gen:c|clk_out 
+    Info (332119):     0.178               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.332               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.438
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.098            -280.257 shift_sampler:s|sample_flag 
-    Info (332119):    -6.797            -206.625 GPIO_1[17] 
-Info (332146): Worst-case removal slack is 0.534
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.534               0.000 GPIO_1[17] 
-    Info (332119):     2.968               0.000 shift_sampler:s|sample_flag 
-Info (332146): Worst-case minimum pulse width slack is -0.796
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.796            -190.003 GPIO_1[17] 
-    Info (332119):    -0.327              -8.541 shift_sampler:s|sample_flag 
+    Info (332119):    -0.438              -1.590 CLOCK_50 
+    Info (332119):    -0.009              -0.009 shift_sampler:s|sample_flag 
+    Info (332119):     0.000               0.000 clk_40_gen:c|clk_out 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.185
+Info (332146): Worst-case setup slack is -3.388
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.185            -630.206 shift_sampler:s|sample_flag 
-    Info (332119):    -5.924            -367.987 GPIO_1[17] 
-Info (332146): Worst-case hold slack is 0.254
+    Info (332119):    -3.388             -17.193 CLOCK_50 
+    Info (332119):    -2.844            -285.505 clk_40_gen:c|clk_out 
+    Info (332119):    -1.777             -12.930 shift_sampler:s|sample_flag 
+Info (332146): Worst-case hold slack is 0.062
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.254               0.000 GPIO_1[17] 
-    Info (332119):     0.344               0.000 shift_sampler:s|sample_flag 
-Info (332146): Worst-case recovery slack is -8.236
+    Info (332119):     0.062               0.000 clk_40_gen:c|clk_out 
+    Info (332119):     0.183               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.298               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.464
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.236            -253.365 shift_sampler:s|sample_flag 
-    Info (332119):    -5.975            -181.013 GPIO_1[17] 
-Info (332146): Worst-case removal slack is 0.283
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.283               0.000 GPIO_1[17] 
-    Info (332119):     2.679               0.000 shift_sampler:s|sample_flag 
-Info (332146): Worst-case minimum pulse width slack is -0.656
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.656            -154.611 GPIO_1[17] 
-    Info (332119):    -0.248              -1.850 shift_sampler:s|sample_flag 
+    Info (332119):    -0.464              -1.614 CLOCK_50 
+    Info (332119):     0.002               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.040               0.000 clk_40_gen:c|clk_out 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 5151 megabytes
-    Info: Processing ended: Tue Apr 09 12:42:26 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 5135 megabytes
+    Info: Processing ended: Tue Apr 09 16:24:30 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:18
 
 

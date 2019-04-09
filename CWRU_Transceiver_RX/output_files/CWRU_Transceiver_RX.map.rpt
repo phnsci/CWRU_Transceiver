@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CWRU_Transceiver_RX
-Tue Apr 09 12:41:08 2019
+Tue Apr 09 16:22:02 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,10 +15,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +45,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 09 12:41:08 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 09 16:22:02 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CWRU_Transceiver_RX                         ;
 ; Top-level Entity Name           ; CWRU_Transceiver_RX                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 8                                           ;
+; Total registers                 ; 134                                         ;
 ; Total pins                      ; 44                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -157,28 +158,28 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                              ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; src/shift_sampler.v              ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v       ;         ;
-; src/CWRU_Transceiver_RX.v        ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v ;         ;
-; src/clk_40_gen.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v          ;         ;
-; src/HEX_display.v                ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v         ;         ;
-; src/sample_decoder.v             ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v      ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; src/shift_sampler.v              ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v       ;         ;
+; src/CWRU_Transceiver_RX.v        ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v ;         ;
+; src/clk_40_gen.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v          ;         ;
+; src/HEX_display.v                ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v         ;         ;
+; src/sample_decoder.v             ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v      ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------+
@@ -186,25 +187,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimate of Logic utilization (ALMs needed) ; 248              ;
+; Estimate of Logic utilization (ALMs needed) ; 225              ;
 ;                                             ;                  ;
-; Combinational ALUT usage for logic          ; 389              ;
+; Combinational ALUT usage for logic          ; 334              ;
 ;     -- 7 input functions                    ; 0                ;
-;     -- 6 input functions                    ; 107              ;
-;     -- 5 input functions                    ; 52               ;
-;     -- 4 input functions                    ; 49               ;
-;     -- <=3 input functions                  ; 181              ;
+;     -- 6 input functions                    ; 115              ;
+;     -- 5 input functions                    ; 83               ;
+;     -- 4 input functions                    ; 22               ;
+;     -- <=3 input functions                  ; 114              ;
 ;                                             ;                  ;
-; Dedicated logic registers                   ; 8                ;
+; Dedicated logic registers                   ; 134              ;
 ;                                             ;                  ;
 ; I/O pins                                    ; 44               ;
 ;                                             ;                  ;
 ; Total DSP Blocks                            ; 0                ;
 ;                                             ;                  ;
-; Maximum fan-out node                        ; GPIO_1[17]~input ;
-; Maximum fan-out                             ; 92               ;
-; Total fan-out                               ; 1629             ;
-; Average fan-out                             ; 3.36             ;
+; Maximum fan-out node                        ; GPIO_1[15]~input ;
+; Maximum fan-out                             ; 117              ;
+; Total fan-out                               ; 1802             ;
+; Average fan-out                             ; 3.24             ;
 +---------------------------------------------+------------------+
 
 
@@ -213,122 +214,29 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name         ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
-; |CWRU_Transceiver_RX       ; 389 (0)             ; 8 (0)                     ; 0                 ; 0          ; 44   ; 0            ; |CWRU_Transceiver_RX                  ; CWRU_Transceiver_RX ; work         ;
+; |CWRU_Transceiver_RX       ; 334 (0)             ; 134 (0)                   ; 0                 ; 0          ; 44   ; 0            ; |CWRU_Transceiver_RX                  ; CWRU_Transceiver_RX ; work         ;
 ;    |HEX_display:h|         ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|HEX_display:h    ; HEX_display         ; work         ;
+;    |clk_40_gen:c|          ; 17 (17)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|clk_40_gen:c     ; clk_40_gen          ; work         ;
 ;    |sample_decoder:d|      ; 88 (88)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|sample_decoder:d ; sample_decoder      ; work         ;
-;    |shift_sampler:s|       ; 284 (284)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|shift_sampler:s  ; shift_sampler       ; work         ;
+;    |shift_sampler:s|       ; 212 (212)           ; 113 (113)                 ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|shift_sampler:s  ; shift_sampler       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                      ;
-+------------------------------------------------------+--------------------------+------------------------+
-; Latch Name                                           ; Latch Enable Signal      ; Free of Timing Hazards ;
-+------------------------------------------------------+--------------------------+------------------------+
-; HEX_display:h|HEX0[0]                                ; GND                      ; yes                    ;
-; HEX_display:h|HEX0[2]                                ; GND                      ; yes                    ;
-; HEX_display:h|HEX0[3]                                ; GND                      ; yes                    ;
-; HEX_display:h|HEX0[4]                                ; GND                      ; yes                    ;
-; HEX_display:h|HEX0[5]                                ; GND                      ; yes                    ;
-; HEX_display:h|HEX0[6]                                ; GND                      ; yes                    ;
-; shift_sampler:s|sample_flag                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|sample[74]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[72]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[70]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[71]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[73]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[79]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[75]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[76]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[77]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[78]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|counter[1]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[31]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[0]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[30]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[29]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[28]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[27]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[26]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[25]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[24]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[23]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[22]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[21]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[20]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[19]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[18]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[17]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[16]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[15]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[14]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[13]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[12]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[11]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[10]                          ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[9]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[8]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[7]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[6]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[5]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[4]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[3]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|counter[2]                           ; shift_sampler:s|always0  ; yes                    ;
-; shift_sampler:s|sample[64]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[62]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[60]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[61]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[63]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[69]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[65]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[66]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[67]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[68]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[54]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[52]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[50]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[51]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[53]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[59]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[55]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[56]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[57]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[58]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[44]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[42]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[40]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[41]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[43]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[49]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[45]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[46]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[47]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[48]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[34]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[32]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[30]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[31]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[33]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[39]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[35]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[36]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[37]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[38]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[24]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[22]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[20]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[21]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[23]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[29]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[25]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[26]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[27]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[28]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; shift_sampler:s|sample[14]                           ; shift_sampler:s|Decoder0 ; yes                    ;
-; Number of user-specified and inferred latches = 119  ;                          ;                        ;
-+------------------------------------------------------+--------------------------+------------------------+
-Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; HEX_display:h|HEX0[0]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[2]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[3]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[4]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[5]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[6]                              ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -336,8 +244,8 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 134   ;
+; Number of registers using Synchronous Clear  ; 40    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -346,12 +254,26 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; shift_sampler:s|counter[1]             ; 2       ;
+; shift_sampler:s|counter[0]             ; 2       ;
+; shift_sampler:s|counter[6]             ; 3       ;
+; shift_sampler:s|counter[3]             ; 4       ;
+; shift_sampler:s|counter[2]             ; 3       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CWRU_Transceiver_RX|HEX_display:h|HEX0[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CWRU_Transceiver_RX|HEX_display:h|HEX0[4] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -360,25 +282,26 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 8                           ;
-;     plain             ; 8                           ;
-; arriav_lcell_comb     ; 390                         ;
-;     arith             ; 64                          ;
+; arriav_ff             ; 134                         ;
+;     SCLR              ; 40                          ;
+;     plain             ; 94                          ;
+; arriav_lcell_comb     ; 335                         ;
+;     arith             ; 76                          ;
 ;         0 data inputs ; 8                           ;
-;         1 data inputs ; 32                          ;
+;         1 data inputs ; 44                          ;
 ;         2 data inputs ; 16                          ;
 ;         5 data inputs ; 8                           ;
-;     normal            ; 326                         ;
+;     normal            ; 259                         ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 29                          ;
-;         3 data inputs ; 96                          ;
-;         4 data inputs ; 49                          ;
-;         5 data inputs ; 44                          ;
-;         6 data inputs ; 107                         ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 75                          ;
+;         6 data inputs ; 115                         ;
 ; boundary_port         ; 44                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.70                        ;
-; Average LUT depth     ; 5.10                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -387,7 +310,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -397,384 +320,37 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 09 12:40:55 2019
+    Info: Processing started: Tue Apr 09 16:21:42 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CWRU_Transceiver_RX -c CWRU_Transceiver_RX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/shift_sampler.v
-    Info (12023): Found entity 1: shift_sampler File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 1
+    Info (12023): Found entity 1: shift_sampler File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_rx.v
-    Info (12023): Found entity 1: CWRU_Transceiver_RX File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 1
+    Info (12023): Found entity 1: CWRU_Transceiver_RX File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_rx_tb.v
-    Info (12023): Found entity 1: CWRU_Transceiver_RX_tb File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX_tb.v Line: 3
+    Info (12023): Found entity 1: CWRU_Transceiver_RX_tb File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file src/clk_40_gen.v
-    Info (12023): Found entity 1: clk_40_gen File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v Line: 1
+    Info (12023): Found entity 1: clk_40_gen File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/hex_display.v
-    Info (12023): Found entity 1: HEX_display File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 1
+    Info (12023): Found entity 1: HEX_display File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/sample_decoder.v
-    Info (12023): Found entity 1: sample_decoder File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v Line: 1
+    Info (12023): Found entity 1: sample_decoder File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v Line: 1
 Info (12127): Elaborating entity "CWRU_Transceiver_RX" for the top level hierarchy
-Info (12128): Elaborating entity "clk_40_gen" for hierarchy "clk_40_gen:c" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 11
-Info (12128): Elaborating entity "shift_sampler" for hierarchy "shift_sampler:s" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 12
-Warning (10235): Verilog HDL Always Construct warning at shift_sampler.v(21): variable "sample_flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at shift_sampler.v(21): variable "signal" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at shift_sampler.v(28): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at shift_sampler.v(30): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 30
-Warning (10235): Verilog HDL Always Construct warning at shift_sampler.v(31): variable "signal" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 31
-Warning (10240): Verilog HDL Always Construct warning at shift_sampler.v(17): inferring latch(es) for variable "sample_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 17
-Warning (10240): Verilog HDL Always Construct warning at shift_sampler.v(17): inferring latch(es) for variable "counter", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 17
-Warning (10240): Verilog HDL Always Construct warning at shift_sampler.v(17): inferring latch(es) for variable "sample", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 17
-Info (10041): Inferred latch for "sample_flag" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[0]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[1]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[2]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[3]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[4]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[5]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[6]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[7]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[8]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[9]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[10]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[11]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[12]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[13]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[14]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[15]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[16]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[17]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[18]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[19]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[20]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[21]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[22]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[23]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[24]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[25]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[26]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[27]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[28]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[29]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[30]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "counter[31]" at shift_sampler.v(36) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Info (10041): Inferred latch for "sample[0]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[1]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[2]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[3]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[4]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[5]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[6]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[7]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[8]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[9]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[10]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[11]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[12]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[13]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[14]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[15]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[16]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[17]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[18]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[19]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[20]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[21]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[22]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[23]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[24]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[25]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[26]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[27]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[28]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[29]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[30]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[31]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[32]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[33]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[34]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[35]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[36]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[37]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[38]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[39]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[40]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[41]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[42]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[43]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[44]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[45]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[46]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[47]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[48]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[49]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[50]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[51]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[52]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[53]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[54]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[55]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[56]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[57]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[58]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[59]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[60]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[61]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[62]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[63]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[64]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[65]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[66]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[67]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[68]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[69]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[70]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[71]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[72]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[73]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[74]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[75]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[76]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[77]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[78]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (10041): Inferred latch for "sample[79]" at shift_sampler.v(28) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-Info (12128): Elaborating entity "sample_decoder" for hierarchy "sample_decoder:d" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 13
-Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:h" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 14
-Warning (10240): Verilog HDL Always Construct warning at HEX_display.v(6): inferring latch(es) for variable "HEX0", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[0]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[1]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[2]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[3]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[4]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[5]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[6]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Warning (13012): Latch shift_sampler:s|sample_flag has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 6
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[74] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[72] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[70] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[71] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[73] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[79] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[75] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[76] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[77] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[78] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|counter[1] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[31] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[0] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[30] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[29] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[28] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[27] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[26] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[25] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[24] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[23] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[22] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[21] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[20] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[19] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[18] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[17] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[16] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[15] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[14] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[13] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[12] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[11] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[10] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[9] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[8] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[7] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[6] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[5] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[4] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[3] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|counter[2] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal shift_sampler:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 36
-Warning (13012): Latch shift_sampler:s|sample[64] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[62] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[60] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[61] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[63] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[69] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[65] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[66] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[67] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[68] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[54] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[52] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[50] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[51] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[53] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[59] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[55] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[56] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[57] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[58] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[44] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[42] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[40] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[41] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[43] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[49] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[45] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[46] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[47] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[48] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[34] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[32] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[30] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[31] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[33] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[39] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[35] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[36] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[37] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[38] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[24] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[22] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[20] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[21] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[23] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[29] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[25] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[26] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[27] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[28] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[14] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[12] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[10] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[11] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[13] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[19] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[15] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[16] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[17] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[18] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[4] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[2] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[0] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[1] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[3] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[9] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[5] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[6] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[7] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Warning (13012): Latch shift_sampler:s|sample[8] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GPIO_1[17] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+Info (12128): Elaborating entity "clk_40_gen" for hierarchy "clk_40_gen:c" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 11
+Info (12128): Elaborating entity "shift_sampler" for hierarchy "shift_sampler:s" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 12
+Info (12128): Elaborating entity "sample_decoder" for hierarchy "sample_decoder:d" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 13
+Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:h" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 14
+Warning (10240): Verilog HDL Always Construct warning at HEX_display.v(6): inferring latch(es) for variable "HEX0", which holds its previous value in one or more paths through the always construct File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 6
+Info (10041): Inferred latch for "HEX0[0]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[1]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[2]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[3]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[4]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[5]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[6]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 5
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SOC -section_id Top was ignored
@@ -803,51 +379,50 @@ Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not 
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SOC -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 36 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 2
-    Warning (15610): No output dependent on input pin "GPIO_1[0]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[1]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[2]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[3]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[4]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[5]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[6]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[7]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[8]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[9]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[10]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[11]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[12]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[13]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[14]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[15]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[16]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[18]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[19]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[20]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[21]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[22]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[23]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[24]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[25]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[26]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[27]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[28]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[29]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[30]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[31]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[32]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[33]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[34]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[35]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Info (21057): Implemented 433 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 35 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "GPIO_1[0]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[1]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[2]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[3]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[4]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[5]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[6]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[7]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[8]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[9]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[10]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[11]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[12]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[13]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[14]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[16]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[17]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[18]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[19]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[20]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[21]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[22]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[23]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[24]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[25]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[26]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[27]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[28]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[29]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[30]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[31]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[32]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[33]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[34]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[35]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+Info (21057): Implemented 396 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 37 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 389 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 300 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Tue Apr 09 12:41:08 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21061): Implemented 352 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Tue Apr 09 16:22:02 2019
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:38
 
 

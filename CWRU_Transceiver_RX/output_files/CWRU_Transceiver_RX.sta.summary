@@ -2,164 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'clk_40_gen:c|clk_out'
+Slack : -5.909
+TNS   : -610.553
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -5.039
+TNS   : -41.974
+
 Type  : Slow 1100mV 85C Model Setup 'shift_sampler:s|sample_flag'
-Slack : -14.376
-TNS   : -1096.261
+Slack : -3.567
+TNS   : -27.467
 
-Type  : Slow 1100mV 85C Model Setup 'GPIO_1[17]'
-Slack : -10.852
-TNS   : -681.660
-
-Type  : Slow 1100mV 85C Model Hold 'GPIO_1[17]'
-Slack : 0.794
+Type  : Slow 1100mV 85C Model Hold 'clk_40_gen:c|clk_out'
+Slack : 0.407
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'shift_sampler:s|sample_flag'
-Slack : 0.843
+Slack : 0.464
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Recovery 'shift_sampler:s|sample_flag'
-Slack : -14.962
-TNS   : -460.891
-
-Type  : Slow 1100mV 85C Model Recovery 'GPIO_1[17]'
-Slack : -11.438
-TNS   : -348.123
-
-Type  : Slow 1100mV 85C Model Removal 'GPIO_1[17]'
-Slack : 1.482
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.615
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Removal 'shift_sampler:s|sample_flag'
-Slack : 5.115
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
+Slack : -0.394
+TNS   : -66.207
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'GPIO_1[17]'
-Slack : -0.635
-TNS   : -108.830
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -6.972
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
-Slack : -0.583
-TNS   : -8.824
+Slack : -0.394
+TNS   : -4.421
+
+Type  : Slow 1100mV 0C Model Setup 'clk_40_gen:c|clk_out'
+Slack : -5.944
+TNS   : -609.103
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -5.254
+TNS   : -42.866
 
 Type  : Slow 1100mV 0C Model Setup 'shift_sampler:s|sample_flag'
-Slack : -14.141
-TNS   : -1067.491
+Slack : -3.650
+TNS   : -27.868
 
-Type  : Slow 1100mV 0C Model Setup 'GPIO_1[17]'
-Slack : -10.649
-TNS   : -659.151
-
-Type  : Slow 1100mV 0C Model Hold 'GPIO_1[17]'
-Slack : 0.508
+Type  : Slow 1100mV 0C Model Hold 'clk_40_gen:c|clk_out'
+Slack : 0.376
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'shift_sampler:s|sample_flag'
-Slack : 0.955
+Slack : 0.517
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Recovery 'shift_sampler:s|sample_flag'
-Slack : -14.612
-TNS   : -449.266
-
-Type  : Slow 1100mV 0C Model Recovery 'GPIO_1[17]'
-Slack : -11.120
-TNS   : -337.522
-
-Type  : Slow 1100mV 0C Model Removal 'GPIO_1[17]'
-Slack : 1.299
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.589
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Removal 'shift_sampler:s|sample_flag'
-Slack : 4.901
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.410
+TNS   : -7.463
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'GPIO_1[17]'
-Slack : -0.594
-TNS   : -86.962
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
+Slack : -0.394
+TNS   : -64.566
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
-Slack : -0.517
-TNS   : -7.084
+Slack : -0.394
+TNS   : -4.279
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.032
+TNS   : -19.062
+
+Type  : Fast 1100mV 85C Model Setup 'clk_40_gen:c|clk_out'
+Slack : -3.188
+TNS   : -317.190
 
 Type  : Fast 1100mV 85C Model Setup 'shift_sampler:s|sample_flag'
-Slack : -9.110
-TNS   : -699.982
+Slack : -1.920
+TNS   : -13.790
 
-Type  : Fast 1100mV 85C Model Setup 'GPIO_1[17]'
-Slack : -6.809
-TNS   : -431.730
+Type  : Fast 1100mV 85C Model Hold 'clk_40_gen:c|clk_out'
+Slack : 0.093
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'shift_sampler:s|sample_flag'
-Slack : 0.294
+Slack : 0.178
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'GPIO_1[17]'
-Slack : 0.448
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.332
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Recovery 'shift_sampler:s|sample_flag'
-Slack : -9.098
-TNS   : -280.257
-
-Type  : Fast 1100mV 85C Model Recovery 'GPIO_1[17]'
-Slack : -6.797
-TNS   : -206.625
-
-Type  : Fast 1100mV 85C Model Removal 'GPIO_1[17]'
-Slack : 0.534
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'shift_sampler:s|sample_flag'
-Slack : 2.968
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'GPIO_1[17]'
-Slack : -0.796
-TNS   : -190.003
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.438
+TNS   : -1.590
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
-Slack : -0.327
-TNS   : -8.541
+Slack : -0.009
+TNS   : -0.009
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -3.388
+TNS   : -17.193
+
+Type  : Fast 1100mV 0C Model Setup 'clk_40_gen:c|clk_out'
+Slack : -2.844
+TNS   : -285.505
 
 Type  : Fast 1100mV 0C Model Setup 'shift_sampler:s|sample_flag'
-Slack : -8.185
-TNS   : -630.206
+Slack : -1.777
+TNS   : -12.930
 
-Type  : Fast 1100mV 0C Model Setup 'GPIO_1[17]'
-Slack : -5.924
-TNS   : -367.987
-
-Type  : Fast 1100mV 0C Model Hold 'GPIO_1[17]'
-Slack : 0.254
+Type  : Fast 1100mV 0C Model Hold 'clk_40_gen:c|clk_out'
+Slack : 0.062
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'shift_sampler:s|sample_flag'
-Slack : 0.344
+Slack : 0.183
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Recovery 'shift_sampler:s|sample_flag'
-Slack : -8.236
-TNS   : -253.365
-
-Type  : Fast 1100mV 0C Model Recovery 'GPIO_1[17]'
-Slack : -5.975
-TNS   : -181.013
-
-Type  : Fast 1100mV 0C Model Removal 'GPIO_1[17]'
-Slack : 0.283
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.298
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Removal 'shift_sampler:s|sample_flag'
-Slack : 2.679
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'GPIO_1[17]'
-Slack : -0.656
-TNS   : -154.611
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.464
+TNS   : -1.614
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
-Slack : -0.248
-TNS   : -1.850
+Slack : 0.002
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
+Slack : 0.040
+TNS   : 0.000
 
 ------------------------------------------------------------

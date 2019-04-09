@@ -14,7 +14,7 @@ begin
 	counter = 79;
 end
 
-always @(clk)
+always @(posedge clk)
 begin
 	// if not currently sampling and a high signal is sensed,
 	// assert sample flag to begin sampling

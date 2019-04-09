@@ -15,7 +15,7 @@ begin
 	counter = 0;
 end
 
-always @(clk)
+always @(posedge clk) // transmit at 4kHz
 begin
 	// if not currently shifting and a button is pressed,
 	// bus code to internal register and assert shift flag

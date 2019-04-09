@@ -9,7 +9,7 @@ wire [79:0] sample;
 wire [7:0] code;
 
 clk_40_gen c(CLOCK_50, clk_40); // to generate 40kHz clock from 50MHz clock
-shift_sampler s(clk_40, GPIO_1[17], sample, sample_flag); // signal exits PCB through pin 20?
+shift_sampler s(clk_40, GPIO_1[15], sample, sample_flag); // signal exits PCB to pin 18
 sample_decoder d(sample_flag, sample, code); // to decode sampled signal down to 8 bits
 HEX_display h(code, HEX0); // to display decoded signal
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CWRU_Transceiver_TX
-Tue Apr 09 12:29:42 2019
+Tue Apr 09 16:10:43 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,11 +15,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,13 +46,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 09 12:29:42 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 09 16:10:43 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CWRU_Transceiver_TX                         ;
 ; Top-level Entity Name           ; CWRU_Transceiver_TX                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 21                                          ;
+; Total registers                 ; 62                                          ;
 ; Total pins                      ; 48                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -158,56 +159,55 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                              ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; src/code_shifter.v               ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v        ;         ;
-; src/button_encoder.v             ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v      ;         ;
-; src/HEX_display.v                ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v         ;         ;
-; src/CWRU_Transceiver_TX.v        ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v ;         ;
-; src/clk_4_gen.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v           ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; src/code_shifter.v               ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v        ;         ;
+; src/button_encoder.v             ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v      ;         ;
+; src/HEX_display.v                ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v         ;         ;
+; src/CWRU_Transceiver_TX.v        ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v ;         ;
+; src/clk_4_gen.v                  ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v           ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 99                       ;
-;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 159                      ;
-;     -- 7 input functions                    ; 0                        ;
-;     -- 6 input functions                    ; 39                       ;
-;     -- 5 input functions                    ; 2                        ;
-;     -- 4 input functions                    ; 45                       ;
-;     -- <=3 input functions                  ; 73                       ;
-;                                             ;                          ;
-; Dedicated logic registers                   ; 21                       ;
-;                                             ;                          ;
-; I/O pins                                    ; 48                       ;
-;                                             ;                          ;
-; Total DSP Blocks                            ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; code_shifter:s|always0~1 ;
-; Maximum fan-out                             ; 39                       ;
-; Total fan-out                               ; 701                      ;
-; Average fan-out                             ; 2.54                     ;
-+---------------------------------------------+--------------------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 91                  ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 138                 ;
+;     -- 7 input functions                    ; 0                   ;
+;     -- 6 input functions                    ; 43                  ;
+;     -- 5 input functions                    ; 7                   ;
+;     -- 4 input functions                    ; 15                  ;
+;     -- <=3 input functions                  ; 73                  ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 62                  ;
+;                                             ;                     ;
+; I/O pins                                    ; 48                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; clk_4_gen:c|clk_out ;
+; Maximum fan-out                             ; 46                  ;
+; Total fan-out                               ; 754                 ;
+; Average fan-out                             ; 2.55                ;
++---------------------------------------------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,69 +215,28 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name         ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
-; |CWRU_Transceiver_TX       ; 159 (0)             ; 21 (0)                    ; 0                 ; 0          ; 48   ; 0            ; |CWRU_Transceiver_TX                  ; CWRU_Transceiver_TX ; work         ;
+; |CWRU_Transceiver_TX       ; 138 (0)             ; 62 (0)                    ; 0                 ; 0          ; 48   ; 0            ; |CWRU_Transceiver_TX                  ; CWRU_Transceiver_TX ; work         ;
 ;    |HEX_display:h|         ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_TX|HEX_display:h    ; HEX_display         ; work         ;
 ;    |button_encoder:b|      ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_TX|button_encoder:b ; button_encoder      ; work         ;
 ;    |clk_4_gen:c|           ; 23 (23)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_TX|clk_4_gen:c      ; clk_4_gen           ; work         ;
-;    |code_shifter:s|        ; 116 (116)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_TX|code_shifter:s   ; code_shifter        ; work         ;
+;    |code_shifter:s|        ; 95 (95)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_TX|code_shifter:s   ; code_shifter        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal        ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; code_shifter:s|code_MSB                             ; code_shifter:s|always0     ; yes                    ;
-; HEX_display:h|HEX0[0]                               ; GND                        ; yes                    ;
-; HEX_display:h|HEX0[2]                               ; GND                        ; yes                    ;
-; HEX_display:h|HEX0[3]                               ; GND                        ; yes                    ;
-; HEX_display:h|HEX0[4]                               ; GND                        ; yes                    ;
-; HEX_display:h|HEX0[5]                               ; GND                        ; yes                    ;
-; HEX_display:h|HEX0[6]                               ; GND                        ; yes                    ;
-; code_shifter:s|shift_flag                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|code_reg[7]                          ; code_shifter:s|code_reg[1] ; yes                    ;
-; code_shifter:s|counter[31]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[4]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[5]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[6]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[7]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[8]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[9]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[10]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[11]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[12]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[13]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[14]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[15]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[16]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[17]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[18]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[19]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[20]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[21]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[22]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[23]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[24]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[25]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[26]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[27]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[28]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[29]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[30]                          ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[3]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[0]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[1]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|counter[2]                           ; code_shifter:s|always0     ; yes                    ;
-; code_shifter:s|code_reg[6]                          ; code_shifter:s|code_reg[1] ; yes                    ;
-; code_shifter:s|code_reg[5]                          ; code_shifter:s|code_reg[1] ; yes                    ;
-; code_shifter:s|code_reg[4]                          ; code_shifter:s|code_reg[1] ; yes                    ;
-; code_shifter:s|code_reg[3]                          ; code_shifter:s|code_reg[1] ; yes                    ;
-; code_shifter:s|code_reg[2]                          ; code_shifter:s|code_reg[1] ; yes                    ;
-; code_shifter:s|code_reg[1]                          ; code_shifter:s|code_reg[1] ; yes                    ;
-; Number of user-specified and inferred latches = 47  ;                            ;                        ;
-+-----------------------------------------------------+----------------------------+------------------------+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; HEX_display:h|HEX0[0]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[2]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[3]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[4]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[5]                              ; GND                 ; yes                    ;
+; HEX_display:h|HEX0[6]                              ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -287,8 +246,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
 ; button_encoder:b|code[0,2,4,6]        ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 4 ;                                        ;
+; code_shifter:s|code_reg[0]            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 5 ;                                        ;
 +---------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                   ;
++--------------------------+---------------------------+----------------------------------------+
+; Register name            ; Reason for Removal        ; Registers Removed due to This Register ;
++--------------------------+---------------------------+----------------------------------------+
+; button_encoder:b|code[0] ; Stuck at GND              ; code_shifter:s|code_reg[0]             ;
+;                          ; due to stuck port data_in ;                                        ;
++--------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -296,12 +266,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
-; Number of registers using Synchronous Clear  ; 16    ;
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 49    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -311,9 +281,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CWRU_Transceiver_TX|code_shifter:s|code_reg[7] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CWRU_Transceiver_TX|code_shifter:s|code_reg[6] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CWRU_Transceiver_TX|HEX_display:h|HEX0[4]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |CWRU_Transceiver_TX|code_shifter:s|code_reg[2] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |CWRU_Transceiver_TX|code_shifter:s|code_reg[3] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CWRU_Transceiver_TX|HEX_display:h|HEX0[2]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -322,23 +292,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 21                          ;
-;     SCLR              ; 16                          ;
-;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 160                         ;
+; arriav_ff             ; 62                          ;
+;     ENA               ; 6                           ;
+;     SCLR              ; 49                          ;
+;     plain             ; 7                           ;
+; arriav_lcell_comb     ; 139                         ;
 ;     arith             ; 48                          ;
 ;         1 data inputs ; 48                          ;
-;     normal            ; 112                         ;
+;     normal            ; 91                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 45                          ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 39                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 15                          ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 43                          ;
 ; boundary_port         ; 48                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.41                        ;
+; Max LUT depth         ; 7.10                        ;
+; Average LUT depth     ; 4.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -347,7 +318,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -357,207 +328,74 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 09 12:29:31 2019
+    Info: Processing started: Tue Apr 09 16:10:24 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CWRU_Transceiver_TX -c CWRU_Transceiver_TX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/code_shifter.v
-    Info (12023): Found entity 1: code_shifter File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 1
+    Info (12023): Found entity 1: code_shifter File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/button_encoder.v
-    Info (12023): Found entity 1: button_encoder File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v Line: 1
+    Info (12023): Found entity 1: button_encoder File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/hex_display.v
-    Info (12023): Found entity 1: HEX_display File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 1
+    Info (12023): Found entity 1: HEX_display File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_tx.v
-    Info (12023): Found entity 1: CWRU_Transceiver_TX File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
+    Info (12023): Found entity 1: CWRU_Transceiver_TX File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/clk_4_gen.v
-    Info (12023): Found entity 1: clk_4_gen File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 1
+    Info (12023): Found entity 1: clk_4_gen File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_tx_tb.v
-    Info (12023): Found entity 1: CWRU_Transceiver_TX_tb File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v Line: 3
+    Info (12023): Found entity 1: CWRU_Transceiver_TX_tb File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v Line: 3
 Info (12127): Elaborating entity "CWRU_Transceiver_TX" for the top level hierarchy
-Warning (10034): Output port "GPIO_1[35..18]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-Warning (10034): Output port "GPIO_1[16..0]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-Info (12128): Elaborating entity "clk_4_gen" for hierarchy "clk_4_gen:c" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 13
-Info (12128): Elaborating entity "button_encoder" for hierarchy "button_encoder:b" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 14
-Info (12128): Elaborating entity "code_shifter" for hierarchy "code_shifter:s" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 15
-Warning (10235): Verilog HDL Always Construct warning at code_shifter.v(22): variable "shift_flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 22
-Warning (10235): Verilog HDL Always Construct warning at code_shifter.v(22): variable "code" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 22
-Warning (10235): Verilog HDL Always Construct warning at code_shifter.v(24): variable "code" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 24
-Warning (10235): Verilog HDL Always Construct warning at code_shifter.v(30): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Warning (10235): Verilog HDL Always Construct warning at code_shifter.v(32): variable "counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 32
-Warning (10240): Verilog HDL Always Construct warning at code_shifter.v(18): inferring latch(es) for variable "code_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 18
-Warning (10240): Verilog HDL Always Construct warning at code_shifter.v(18): inferring latch(es) for variable "shift_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 18
-Warning (10240): Verilog HDL Always Construct warning at code_shifter.v(18): inferring latch(es) for variable "counter", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 18
-Warning (10240): Verilog HDL Always Construct warning at code_shifter.v(18): inferring latch(es) for variable "code_MSB", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 18
-Info (10041): Inferred latch for "shift_flag" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[0]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[1]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[2]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[3]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[4]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[5]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[6]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[7]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[8]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[9]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[10]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[11]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[12]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[13]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[14]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[15]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[16]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[17]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[18]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[19]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[20]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[21]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[22]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[23]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[24]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[25]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[26]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[27]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[28]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[29]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[30]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "counter[31]" at code_shifter.v(39) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Info (10041): Inferred latch for "code_reg[0]" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (10041): Inferred latch for "code_reg[1]" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (10041): Inferred latch for "code_reg[2]" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (10041): Inferred latch for "code_reg[3]" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (10041): Inferred latch for "code_reg[4]" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (10041): Inferred latch for "code_reg[5]" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (10041): Inferred latch for "code_reg[6]" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (10041): Inferred latch for "code_reg[7]" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (10041): Inferred latch for "code_MSB" at code_shifter.v(30) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:h" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 16
-Warning (10240): Verilog HDL Always Construct warning at HEX_display.v(6): inferring latch(es) for variable "HEX0", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[0]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[1]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[2]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[3]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[4]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[5]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[6]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
-Warning (13012): Latch code_shifter:s|code_MSB has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 5
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal button_encoder:b|code[7] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v Line: 7
-Warning (13012): Latch code_shifter:s|shift_flag has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 9
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal button_encoder:b|code[7] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v Line: 7
-Warning (13012): Latch code_shifter:s|code_reg[7] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal button_encoder:b|code[7] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v Line: 7
-Warning (13012): Latch code_shifter:s|counter[31] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[4] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[5] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[6] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[7] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[8] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[9] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[10] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[11] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[12] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[13] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[14] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[15] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[16] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[17] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[18] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[19] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[20] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[21] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[22] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[23] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[24] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[25] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[26] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[27] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[28] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[29] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[30] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[3] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[0] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[1] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|counter[2] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|code_reg[6] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|code_reg[5] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_shifter:s|shift_flag File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 9
-Warning (13012): Latch code_shifter:s|code_reg[4] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|code_reg[3] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_shifter:s|shift_flag File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 9
-Warning (13012): Latch code_shifter:s|code_reg[2] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
-Warning (13012): Latch code_shifter:s|code_reg[1] has unsafe behavior File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_shifter:s|counter[31] File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v Line: 39
+Warning (10034): Output port "GPIO_1[35..18]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+Warning (10034): Output port "GPIO_1[16..0]" at CWRU_Transceiver_TX.v(4) has no driver File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+Info (12128): Elaborating entity "clk_4_gen" for hierarchy "clk_4_gen:c" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 13
+Info (12128): Elaborating entity "button_encoder" for hierarchy "button_encoder:b" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 14
+Info (12128): Elaborating entity "code_shifter" for hierarchy "code_shifter:s" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 15
+Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:h" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 16
+Warning (10240): Verilog HDL Always Construct warning at HEX_display.v(6): inferring latch(es) for variable "HEX0", which holds its previous value in one or more paths through the always construct File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 6
+Info (10041): Inferred latch for "HEX0[0]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[1]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[2]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[3]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[4]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[5]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[6]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v Line: 10
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "GPIO_1[0]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[1]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[2]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[3]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[4]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[5]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[6]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[7]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[8]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[9]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[10]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[11]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[12]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[13]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[14]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[15]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[16]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[18]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[19]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[20]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[21]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[22]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[23]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[24]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[25]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[26]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[27]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[28]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[29]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[30]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[31]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[32]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[33]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[34]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "GPIO_1[35]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 6
+    Warning (13410): Pin "GPIO_1[0]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[1]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[2]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[3]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[4]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[5]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[6]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[7]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[8]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[9]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[10]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[11]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[12]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[13]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[14]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[15]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[16]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[18]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[19]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[20]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[21]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[22]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[23]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[24]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[25]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[26]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[27]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[28]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[29]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[30]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[31]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[32]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[33]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[34]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "GPIO_1[35]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 4
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SOC -section_id Top was ignored
@@ -586,14 +424,14 @@ Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not 
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SOC -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 219 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 43 output pins
-    Info (21061): Implemented 175 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 157 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Tue Apr 09 12:29:42 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 171 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Tue Apr 09 16:10:43 2019
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:36
 
 
