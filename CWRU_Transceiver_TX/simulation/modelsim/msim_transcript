@@ -12,79 +12,79 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src {C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:28:02 on Apr 16,2019
+# Start time: 17:10:36 on Apr 16,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src" C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/code_shifter.v 
 # -- Compiling module code_shifter
 # 
 # Top level modules:
 # 	code_shifter
-# End time: 16:28:02 on Apr 16,2019, Elapsed time: 0:00:00
+# End time: 17:10:36 on Apr 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src {C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:28:02 on Apr 16,2019
+# Start time: 17:10:37 on Apr 16,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src" C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/button_encoder.v 
 # -- Compiling module button_encoder
 # 
 # Top level modules:
 # 	button_encoder
-# End time: 16:28:02 on Apr 16,2019, Elapsed time: 0:00:00
+# End time: 17:10:37 on Apr 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src {C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:28:02 on Apr 16,2019
+# Start time: 17:10:37 on Apr 16,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src" C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/HEX_display.v 
 # -- Compiling module HEX_display
 # 
 # Top level modules:
 # 	HEX_display
-# End time: 16:28:02 on Apr 16,2019, Elapsed time: 0:00:00
+# End time: 17:10:37 on Apr 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src {C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:28:02 on Apr 16,2019
+# Start time: 17:10:37 on Apr 16,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src" C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX.v 
 # -- Compiling module CWRU_Transceiver_TX
 # 
 # Top level modules:
 # 	CWRU_Transceiver_TX
-# End time: 16:28:02 on Apr 16,2019, Elapsed time: 0:00:00
+# End time: 17:10:37 on Apr 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src {C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:28:02 on Apr 16,2019
+# Start time: 17:10:37 on Apr 16,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src" C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/clk_4_gen.v 
 # -- Compiling module clk_4_gen
 # 
 # Top level modules:
 # 	clk_4_gen
-# End time: 16:28:02 on Apr 16,2019, Elapsed time: 0:00:00
+# End time: 17:10:37 on Apr 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src {C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/callsign.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:28:03 on Apr 16,2019
+# Start time: 17:10:37 on Apr 16,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src" C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/callsign.v 
 # -- Compiling module callsign
 # 
 # Top level modules:
 # 	callsign
-# End time: 16:28:03 on Apr 16,2019, Elapsed time: 0:00:00
+# End time: 17:10:37 on Apr 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src {C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:28:03 on Apr 16,2019
+# Start time: 17:10:37 on Apr 16,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src" C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v 
 # -- Compiling module CWRU_Transceiver_TX_tb
 # 
 # Top level modules:
 # 	CWRU_Transceiver_TX_tb
-# End time: 16:28:03 on Apr 16,2019, Elapsed time: 0:00:00
+# End time: 17:10:38 on Apr 16,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  CWRU_Transceiver_TX_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" CWRU_Transceiver_TX_tb 
-# Start time: 16:28:04 on Apr 16,2019
+# Start time: 17:10:38 on Apr 16,2019
 # Loading work.CWRU_Transceiver_TX_tb
 # Loading work.CWRU_Transceiver_TX
 # Loading work.clk_4_gen
@@ -96,14 +96,16 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ryanl  Hostname: RLX-SB  ProcessID: 8916
-#           Attempting to use alternate WLF file "./wlftnv03md".
+#           Attempting to use alternate WLF file "./wlftmvmqjd".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftnv03md
+#           Using alternate file: ./wlftmvmqjd
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v(71)
-#    Time: 44050 us  Iteration: 0  Instance: /CWRU_Transceiver_TX_tb
-# Break in Module CWRU_Transceiver_TX_tb at C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v line 71
+# ** Note: $stop    : C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v(58)
+#    Time: 39050 us  Iteration: 0  Instance: /CWRU_Transceiver_TX_tb
+# Break in Module CWRU_Transceiver_TX_tb at C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_TX/src/CWRU_Transceiver_TX_tb.v line 58
+# End time: 17:10:57 on Apr 16,2019, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 2

@@ -25,10 +25,10 @@ begin
 		for (j = i * 10; j <= ((i + 1) * 10) - 1; j = j + 1)
 			window_sum = window_sum + sample[j];
 		
-		if (window_sum < 4'h5)
-			code_reg[i] = 1'b0;
-		else
+		if (window_sum >= 4'h3) // for smaller peak widths, has sensitivity to 30% duty cycle
 			code_reg[i] = 1'b1;
+		else
+			code_reg[i] = 1'b0;
 	end
 	// once sample is fully decoded, bus result to output
 	code = code_reg;

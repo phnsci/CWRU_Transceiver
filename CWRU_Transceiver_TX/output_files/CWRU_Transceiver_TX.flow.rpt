@@ -1,5 +1,5 @@
 Flow report for CWRU_Transceiver_TX
-Tue Apr 16 16:27:39 2019
+Tue Apr 16 17:10:24 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Tue Apr 16 16:27:39 2019       ;
+; Flow Status                 ; Successful - Tue Apr 16 17:10:24 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; CWRU_Transceiver_TX                         ;
 ; Top-level Entity Name       ; CWRU_Transceiver_TX                         ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/16/2019 16:27:22 ;
+; Start date & time ; 04/16/2019 17:10:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CWRU_Transceiver_TX ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+---------------------+------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name         ; Section Id             ;
 +--------------------------------------+----------------------------------------+---------------+---------------------+------------------------+
-; COMPILER_SIGNATURE_ID                ; 1096668278477.155544644209448          ; --            ; --                  ; --                     ;
+; COMPILER_SIGNATURE_ID                ; 1096668278477.155544900008244          ; --            ; --                  ; --                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                  ; CWRU_Transceiver_TX_tb ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                  ; clk_4_gen_tb           ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; CWRU_Transceiver_TX_tb                 ; --            ; --                  ; eda_simulation         ;
@@ -109,8 +109,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 4793 MB             ; 00:00:36                           ;
-; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Elaboration ; 00:00:25     ; 1.0                     ; 4793 MB             ; 00:00:53                           ;
+; Total                  ; 00:00:25     ; --                      ; --                  ; 00:00:53                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
