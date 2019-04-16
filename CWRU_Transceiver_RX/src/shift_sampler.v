@@ -5,13 +5,13 @@ module shift_sampler(
 	output reg sample_flag // to control signal input flow
 );
 
-integer counter; // counter to reset at 0
+reg [6:0] counter; // counter to reset at 0
 
 initial
 begin
-	sample = 0;
+	sample = 80'h00000000000000000000;
 	sample_flag = 1'b0;
-	counter = 79;
+	counter = 7'b1001111; // counter starts at 79
 end
 
 always @(posedge clk)
@@ -24,18 +24,19 @@ begin
 	end
 
 	// if sample flag is asserted and counter has not yet reached 0,
-	// increment counter and take one sample of the signal
-	if (sample_flag == 1'b1 && counter >= 0)
+	// take one sample of the signal and decrement counter
+	if (sample_flag == 1'b1 && counter > 7'b0000000)
 	begin
-		counter = counter - 1;
 		sample[counter] = signal;
+		counter = counter - 7'b0000001;
 	end
 
 	// if counter has reached 0 and sampling is completed,
-	// reset counter and deassert sample flag
-	if (counter == 0)
+	// take final sample, reset counter, and deassert sample flag
+	if (counter == 7'b0000000)
 	begin
-		counter = 79;
+		sample[counter] = signal;
+		counter = 7'b1001111;
 		sample_flag = 1'b0;
 	end
 end

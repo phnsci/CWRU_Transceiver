@@ -2,148 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'clk_40_gen:c|clk_out'
-Slack : -5.909
-TNS   : -610.553
-
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -5.039
-TNS   : -41.974
+Slack : -4.412
+TNS   : -41.772
+
+Type  : Slow 1100mV 85C Model Setup 'clk_40_gen:c|clk_out'
+Slack : -3.876
+TNS   : -302.569
 
 Type  : Slow 1100mV 85C Model Setup 'shift_sampler:s|sample_flag'
-Slack : -3.567
-TNS   : -27.467
-
-Type  : Slow 1100mV 85C Model Hold 'clk_40_gen:c|clk_out'
-Slack : 0.407
-TNS   : 0.000
+Slack : -3.608
+TNS   : -26.901
 
 Type  : Slow 1100mV 85C Model Hold 'shift_sampler:s|sample_flag'
-Slack : 0.464
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk_40_gen:c|clk_out'
+Slack : 0.377
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.615
+Slack : 0.702
 TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.483
+TNS   : -7.115
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
 Slack : -0.394
-TNS   : -66.207
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.394
-TNS   : -6.972
+TNS   : -49.633
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
 Slack : -0.394
-TNS   : -4.421
-
-Type  : Slow 1100mV 0C Model Setup 'clk_40_gen:c|clk_out'
-Slack : -5.944
-TNS   : -609.103
+TNS   : -4.489
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -5.254
-TNS   : -42.866
+Slack : -4.627
+TNS   : -42.630
+
+Type  : Slow 1100mV 0C Model Setup 'clk_40_gen:c|clk_out'
+Slack : -3.871
+TNS   : -299.831
 
 Type  : Slow 1100mV 0C Model Setup 'shift_sampler:s|sample_flag'
-Slack : -3.650
-TNS   : -27.868
-
-Type  : Slow 1100mV 0C Model Hold 'clk_40_gen:c|clk_out'
-Slack : 0.376
-TNS   : 0.000
+Slack : -3.605
+TNS   : -26.982
 
 Type  : Slow 1100mV 0C Model Hold 'shift_sampler:s|sample_flag'
-Slack : 0.517
+Slack : 0.351
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk_40_gen:c|clk_out'
+Slack : 0.418
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.589
+Slack : 0.555
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.410
-TNS   : -7.463
+Slack : -0.500
+TNS   : -7.654
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
 Slack : -0.394
-TNS   : -64.566
+TNS   : -48.213
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
 Slack : -0.394
-TNS   : -4.279
+TNS   : -4.257
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.032
-TNS   : -19.062
+Slack : -3.227
+TNS   : -18.113
 
 Type  : Fast 1100mV 85C Model Setup 'clk_40_gen:c|clk_out'
-Slack : -3.188
-TNS   : -317.190
+Slack : -2.010
+TNS   : -152.727
 
 Type  : Fast 1100mV 85C Model Setup 'shift_sampler:s|sample_flag'
-Slack : -1.920
-TNS   : -13.790
+Slack : -1.913
+TNS   : -13.914
 
 Type  : Fast 1100mV 85C Model Hold 'clk_40_gen:c|clk_out'
-Slack : 0.093
+Slack : 0.022
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'shift_sampler:s|sample_flag'
-Slack : 0.178
+Slack : 0.131
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.332
+Slack : 0.528
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.438
-TNS   : -1.590
+Slack : -0.523
+TNS   : -1.693
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
-Slack : -0.009
-TNS   : -0.009
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
-Slack : 0.000
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.388
-TNS   : -17.193
-
-Type  : Fast 1100mV 0C Model Setup 'clk_40_gen:c|clk_out'
-Slack : -2.844
-TNS   : -285.505
-
-Type  : Fast 1100mV 0C Model Setup 'shift_sampler:s|sample_flag'
-Slack : -1.777
-TNS   : -12.930
-
-Type  : Fast 1100mV 0C Model Hold 'clk_40_gen:c|clk_out'
-Slack : 0.062
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'shift_sampler:s|sample_flag'
-Slack : 0.183
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.298
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.464
-TNS   : -1.614
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
 Slack : 0.002
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
+Slack : 0.026
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.707
+TNS   : -16.118
+
+Type  : Fast 1100mV 0C Model Setup 'shift_sampler:s|sample_flag'
+Slack : -1.782
+TNS   : -13.033
+
+Type  : Fast 1100mV 0C Model Setup 'clk_40_gen:c|clk_out'
+Slack : -1.780
+TNS   : -135.726
+
+Type  : Fast 1100mV 0C Model Hold 'clk_40_gen:c|clk_out'
+Slack : 0.018
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'shift_sampler:s|sample_flag'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.510
+TNS   : -1.677
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'shift_sampler:s|sample_flag'
+Slack : 0.024
+TNS   : 0.000
+
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_40_gen:c|clk_out'
-Slack : 0.040
+Slack : 0.059
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -1,0 +1,4 @@
+module callsign(
+	input clk,
+	output code_bit
+);

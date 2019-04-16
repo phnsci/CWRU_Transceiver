@@ -41,15 +41,11 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY CWRU_Transceiver_TX
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:10:08  MARCH 25, 2019"
-set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name VERILOG_FILE src/LED_display.v
-set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_TX.v
-set_global_assignment -name VERILOG_FILE src/clk_4_gen.v
-set_global_assignment -name VERILOG_FILE src/button_input.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -62,4 +58,86 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity D
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 896
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_location_assignment PIN_AF14 -to CLOCK_50
+set_location_assignment PIN_AA14 -to KEY[0]
+set_location_assignment PIN_W15 -to KEY[1]
+set_location_assignment PIN_Y16 -to KEY[2]
+set_location_assignment PIN_AB12 -to KEY[3]
+set_location_assignment PIN_AB17 -to GPIO_1[0]
+set_location_assignment PIN_AA21 -to GPIO_1[1]
+set_location_assignment PIN_AB21 -to GPIO_1[2]
+set_location_assignment PIN_AC23 -to GPIO_1[3]
+set_location_assignment PIN_AD24 -to GPIO_1[4]
+set_location_assignment PIN_AE23 -to GPIO_1[5]
+set_location_assignment PIN_AE24 -to GPIO_1[6]
+set_location_assignment PIN_AF25 -to GPIO_1[7]
+set_location_assignment PIN_AF26 -to GPIO_1[8]
+set_location_assignment PIN_AG25 -to GPIO_1[9]
+set_location_assignment PIN_AG26 -to GPIO_1[10]
+set_location_assignment PIN_AH24 -to GPIO_1[11]
+set_location_assignment PIN_AH27 -to GPIO_1[12]
+set_location_assignment PIN_AJ27 -to GPIO_1[13]
+set_location_assignment PIN_AK29 -to GPIO_1[14]
+set_location_assignment PIN_AK28 -to GPIO_1[15]
+set_location_assignment PIN_AK27 -to GPIO_1[16]
+set_location_assignment PIN_AJ26 -to GPIO_1[17]
+set_location_assignment PIN_AK26 -to GPIO_1[18]
+set_location_assignment PIN_AH25 -to GPIO_1[19]
+set_location_assignment PIN_AJ25 -to GPIO_1[20]
+set_location_assignment PIN_AJ24 -to GPIO_1[21]
+set_location_assignment PIN_AK24 -to GPIO_1[22]
+set_location_assignment PIN_AG23 -to GPIO_1[23]
+set_location_assignment PIN_AK23 -to GPIO_1[24]
+set_location_assignment PIN_AH23 -to GPIO_1[25]
+set_location_assignment PIN_AK22 -to GPIO_1[26]
+set_location_assignment PIN_AJ22 -to GPIO_1[27]
+set_location_assignment PIN_AH22 -to GPIO_1[28]
+set_location_assignment PIN_AG22 -to GPIO_1[29]
+set_location_assignment PIN_AF24 -to GPIO_1[30]
+set_location_assignment PIN_AF23 -to GPIO_1[31]
+set_location_assignment PIN_AE22 -to GPIO_1[32]
+set_location_assignment PIN_AD21 -to GPIO_1[33]
+set_location_assignment PIN_AA20 -to GPIO_1[34]
+set_location_assignment PIN_AC22 -to GPIO_1[35]
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ns" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH CWRU_Transceiver_TX_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME CWRU_Transceiver_TX_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CWRU_Transceiver_TX_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CWRU_Transceiver_TX_tb -section_id CWRU_Transceiver_TX_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME clk_4_gen_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id clk_4_gen_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME clk_4_gen_tb -section_id clk_4_gen_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE src/CWRU_Transceiver_TX_tb.v -section_id CWRU_Transceiver_TX_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE src/clk_4_gen_tb.v -section_id clk_4_gen_tb
+set_location_assignment PIN_AE26 -to HEX0[0]
+set_location_assignment PIN_AE27 -to HEX0[1]
+set_location_assignment PIN_AE28 -to HEX0[2]
+set_location_assignment PIN_AG27 -to HEX0[3]
+set_location_assignment PIN_AF28 -to HEX0[4]
+set_location_assignment PIN_AG28 -to HEX0[5]
+set_location_assignment PIN_AH28 -to HEX0[6]
+set_global_assignment -name VERILOG_FILE src/code_shifter.v
+set_global_assignment -name VERILOG_FILE src/button_encoder.v
+set_global_assignment -name VERILOG_FILE src/HEX_display.v
+set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_TX.v
+set_global_assignment -name VERILOG_FILE src/clk_4_gen.v
+set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_TX_tb.v
+set_location_assignment PIN_AB12 -to SW[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity CWRU_Transceiver_RX -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity CWRU_Transceiver_RX -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity CWRU_Transceiver_RX -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity CWRU_Transceiver_RX -section_id Top
+set_location_assignment PIN_AC12 -to SW[1]
+set_location_assignment PIN_AF9 -to SW[2]
+set_location_assignment PIN_AF10 -to SW[3]
+set_location_assignment PIN_AD11 -to SW[4]
+set_location_assignment PIN_AD12 -to SW[5]
+set_location_assignment PIN_AE11 -to SW[6]
+set_location_assignment PIN_AC9 -to SW[7]
+set_location_assignment PIN_AD10 -to SW[8]
+set_location_assignment PIN_AE12 -to SW[9]
+set_global_assignment -name VERILOG_FILE src/callsign.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

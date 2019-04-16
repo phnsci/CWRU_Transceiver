@@ -48,9 +48,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE1_SOC -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE1_SOC -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity DE1_SOC -section_id Top
@@ -125,4 +122,23 @@ set_global_assignment -name VERILOG_FILE src/HEX_display.v
 set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_TX.v
 set_global_assignment -name VERILOG_FILE src/clk_4_gen.v
 set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_TX_tb.v
+set_location_assignment PIN_AB12 -to SW[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity CWRU_Transceiver_RX -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity CWRU_Transceiver_RX -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity CWRU_Transceiver_RX -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity CWRU_Transceiver_RX -section_id Top
+set_location_assignment PIN_AC12 -to SW[1]
+set_location_assignment PIN_AF9 -to SW[2]
+set_location_assignment PIN_AF10 -to SW[3]
+set_location_assignment PIN_AD11 -to SW[4]
+set_location_assignment PIN_AD12 -to SW[5]
+set_location_assignment PIN_AE11 -to SW[6]
+set_location_assignment PIN_AC9 -to SW[7]
+set_location_assignment PIN_AD10 -to SW[8]
+set_location_assignment PIN_AE12 -to SW[9]
+set_global_assignment -name VERILOG_FILE src/callsign.v
+set_global_assignment -name BOARD "DE1-SoC Board"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

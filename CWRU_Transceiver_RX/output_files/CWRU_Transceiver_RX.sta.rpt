@@ -1,5 +1,5 @@
 Timing Analyzer report for CWRU_Transceiver_RX
-Tue Apr 09 16:24:30 2019
+Tue Apr 16 00:22:34 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -97,14 +97,16 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.16        ;
-; Maximum used               ; 2           ;
+; Average used               ; 1.20        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  16.2%      ;
+;     Processor 2            ;   6.8%      ;
+;     Processor 3            ;   6.6%      ;
+;     Processor 4            ;   6.5%      ;
 +----------------------------+-------------+
 
 
@@ -124,8 +126,8 @@ refer to the applicable agreement for further details.
 +------------+-----------------+----------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name           ; Note ;
 +------------+-----------------+----------------------+------+
-; 144.74 MHz ; 144.74 MHz      ; clk_40_gen:c|clk_out ;      ;
-; 165.59 MHz ; 165.59 MHz      ; CLOCK_50             ;      ;
+; 184.77 MHz ; 184.77 MHz      ; CLOCK_50             ;      ;
+; 205.09 MHz ; 205.09 MHz      ; clk_40_gen:c|clk_out ;      ;
 +------------+-----------------+----------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -141,9 +143,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk_40_gen:c|clk_out        ; -5.909 ; -610.553      ;
-; CLOCK_50                    ; -5.039 ; -41.974       ;
-; shift_sampler:s|sample_flag ; -3.567 ; -27.467       ;
+; CLOCK_50                    ; -4.412 ; -41.772       ;
+; clk_40_gen:c|clk_out        ; -3.876 ; -302.569      ;
+; shift_sampler:s|sample_flag ; -3.608 ; -26.901       ;
 +-----------------------------+--------+---------------+
 
 
@@ -152,9 +154,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clk_40_gen:c|clk_out        ; 0.407 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 0.464 ; 0.000         ;
-; CLOCK_50                    ; 0.615 ; 0.000         ;
+; shift_sampler:s|sample_flag ; 0.316 ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.377 ; 0.000         ;
+; CLOCK_50                    ; 0.702 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -175,9 +177,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk_40_gen:c|clk_out        ; -0.394 ; -66.207       ;
-; CLOCK_50                    ; -0.394 ; -6.972        ;
-; shift_sampler:s|sample_flag ; -0.394 ; -4.421        ;
+; CLOCK_50                    ; -0.483 ; -7.115        ;
+; clk_40_gen:c|clk_out        ; -0.394 ; -49.633       ;
+; shift_sampler:s|sample_flag ; -0.394 ; -4.489        ;
 +-----------------------------+--------+---------------+
 
 
@@ -192,8 +194,8 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name           ; Note ;
 +------------+-----------------+----------------------+------+
-; 144.01 MHz ; 144.01 MHz      ; clk_40_gen:c|clk_out ;      ;
-; 159.9 MHz  ; 159.9 MHz       ; CLOCK_50             ;      ;
+; 177.71 MHz ; 177.71 MHz      ; CLOCK_50             ;      ;
+; 205.3 MHz  ; 205.3 MHz       ; clk_40_gen:c|clk_out ;      ;
 +------------+-----------------+----------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -203,9 +205,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk_40_gen:c|clk_out        ; -5.944 ; -609.103      ;
-; CLOCK_50                    ; -5.254 ; -42.866       ;
-; shift_sampler:s|sample_flag ; -3.650 ; -27.868       ;
+; CLOCK_50                    ; -4.627 ; -42.630       ;
+; clk_40_gen:c|clk_out        ; -3.871 ; -299.831      ;
+; shift_sampler:s|sample_flag ; -3.605 ; -26.982       ;
 +-----------------------------+--------+---------------+
 
 
@@ -214,9 +216,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clk_40_gen:c|clk_out        ; 0.376 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 0.517 ; 0.000         ;
-; CLOCK_50                    ; 0.589 ; 0.000         ;
+; shift_sampler:s|sample_flag ; 0.351 ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.418 ; 0.000         ;
+; CLOCK_50                    ; 0.555 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -237,9 +239,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; CLOCK_50                    ; -0.410 ; -7.463        ;
-; clk_40_gen:c|clk_out        ; -0.394 ; -64.566       ;
-; shift_sampler:s|sample_flag ; -0.394 ; -4.279        ;
+; CLOCK_50                    ; -0.500 ; -7.654        ;
+; clk_40_gen:c|clk_out        ; -0.394 ; -48.213       ;
+; shift_sampler:s|sample_flag ; -0.394 ; -4.257        ;
 +-----------------------------+--------+---------------+
 
 
@@ -254,9 +256,9 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; CLOCK_50                    ; -4.032 ; -19.062       ;
-; clk_40_gen:c|clk_out        ; -3.188 ; -317.190      ;
-; shift_sampler:s|sample_flag ; -1.920 ; -13.790       ;
+; CLOCK_50                    ; -3.227 ; -18.113       ;
+; clk_40_gen:c|clk_out        ; -2.010 ; -152.727      ;
+; shift_sampler:s|sample_flag ; -1.913 ; -13.914       ;
 +-----------------------------+--------+---------------+
 
 
@@ -265,9 +267,9 @@ No synchronizer chains to report.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clk_40_gen:c|clk_out        ; 0.093 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 0.178 ; 0.000         ;
-; CLOCK_50                    ; 0.332 ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.022 ; 0.000         ;
+; shift_sampler:s|sample_flag ; 0.131 ; 0.000         ;
+; CLOCK_50                    ; 0.528 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -288,9 +290,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; CLOCK_50                    ; -0.438 ; -1.590        ;
-; shift_sampler:s|sample_flag ; -0.009 ; -0.009        ;
-; clk_40_gen:c|clk_out        ; 0.000  ; 0.000         ;
+; CLOCK_50                    ; -0.523 ; -1.693        ;
+; shift_sampler:s|sample_flag ; 0.002  ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.026  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -305,9 +307,9 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; CLOCK_50                    ; -3.388 ; -17.193       ;
-; clk_40_gen:c|clk_out        ; -2.844 ; -285.505      ;
-; shift_sampler:s|sample_flag ; -1.777 ; -12.930       ;
+; CLOCK_50                    ; -2.707 ; -16.118       ;
+; shift_sampler:s|sample_flag ; -1.782 ; -13.033       ;
+; clk_40_gen:c|clk_out        ; -1.780 ; -135.726      ;
 +-----------------------------+--------+---------------+
 
 
@@ -316,9 +318,9 @@ No synchronizer chains to report.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clk_40_gen:c|clk_out        ; 0.062 ; 0.000         ;
-; shift_sampler:s|sample_flag ; 0.183 ; 0.000         ;
-; CLOCK_50                    ; 0.298 ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.018 ; 0.000         ;
+; shift_sampler:s|sample_flag ; 0.145 ; 0.000         ;
+; CLOCK_50                    ; 0.378 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -339,9 +341,9 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; CLOCK_50                    ; -0.464 ; -1.614        ;
-; shift_sampler:s|sample_flag ; 0.002  ; 0.000         ;
-; clk_40_gen:c|clk_out        ; 0.040  ; 0.000         ;
+; CLOCK_50                    ; -0.510 ; -1.677        ;
+; shift_sampler:s|sample_flag ; 0.024  ; 0.000         ;
+; clk_40_gen:c|clk_out        ; 0.059  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -356,14 +358,14 @@ No synchronizer chains to report.
 +------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                        ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack             ; -5.944   ; 0.062 ; N/A      ; N/A     ; -0.464              ;
-;  CLOCK_50                    ; -5.254   ; 0.298 ; N/A      ; N/A     ; -0.464              ;
-;  clk_40_gen:c|clk_out        ; -5.944   ; 0.062 ; N/A      ; N/A     ; -0.394              ;
-;  shift_sampler:s|sample_flag ; -3.650   ; 0.178 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS              ; -679.994 ; 0.0   ; 0.0      ; 0.0     ; -77.6               ;
-;  CLOCK_50                    ; -42.866  ; 0.000 ; N/A      ; N/A     ; -7.463              ;
-;  clk_40_gen:c|clk_out        ; -610.553 ; 0.000 ; N/A      ; N/A     ; -66.207             ;
-;  shift_sampler:s|sample_flag ; -27.868  ; 0.000 ; N/A      ; N/A     ; -4.421              ;
+; Worst-case Slack             ; -4.627   ; 0.018 ; N/A      ; N/A     ; -0.523              ;
+;  CLOCK_50                    ; -4.627   ; 0.378 ; N/A      ; N/A     ; -0.523              ;
+;  clk_40_gen:c|clk_out        ; -3.876   ; 0.018 ; N/A      ; N/A     ; -0.394              ;
+;  shift_sampler:s|sample_flag ; -3.608   ; 0.131 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS              ; -371.242 ; 0.0   ; 0.0      ; 0.0     ; -61.237             ;
+;  CLOCK_50                    ; -42.630  ; 0.000 ; N/A      ; N/A     ; -7.654              ;
+;  clk_40_gen:c|clk_out        ; -302.569 ; 0.000 ; N/A      ; N/A     ; -49.633             ;
+;  shift_sampler:s|sample_flag ; -26.982  ; 0.000 ; N/A      ; N/A     ; -4.489              ;
 +------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -492,8 +494,8 @@ No synchronizer chains to report.
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
-; clk_40_gen:c|clk_out        ; clk_40_gen:c|clk_out        ; 61953    ; 0        ; 0        ; 0        ;
-; shift_sampler:s|sample_flag ; clk_40_gen:c|clk_out        ; 628      ; 628      ; 0        ; 0        ;
+; clk_40_gen:c|clk_out        ; clk_40_gen:c|clk_out        ; 1449     ; 0        ; 0        ; 0        ;
+; shift_sampler:s|sample_flag ; clk_40_gen:c|clk_out        ; 118      ; 118      ; 0        ; 0        ;
 ; clk_40_gen:c|clk_out        ; CLOCK_50                    ; 1        ; 1        ; 0        ; 0        ;
 ; CLOCK_50                    ; CLOCK_50                    ; 1092     ; 0        ; 0        ; 0        ;
 ; clk_40_gen:c|clk_out        ; shift_sampler:s|sample_flag ; 0        ; 0        ; 720      ; 0        ;
@@ -506,8 +508,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
-; clk_40_gen:c|clk_out        ; clk_40_gen:c|clk_out        ; 61953    ; 0        ; 0        ; 0        ;
-; shift_sampler:s|sample_flag ; clk_40_gen:c|clk_out        ; 628      ; 628      ; 0        ; 0        ;
+; clk_40_gen:c|clk_out        ; clk_40_gen:c|clk_out        ; 1449     ; 0        ; 0        ; 0        ;
+; shift_sampler:s|sample_flag ; clk_40_gen:c|clk_out        ; 118      ; 118      ; 0        ; 0        ;
 ; clk_40_gen:c|clk_out        ; CLOCK_50                    ; 1        ; 1        ; 0        ; 0        ;
 ; CLOCK_50                    ; CLOCK_50                    ; 1092     ; 0        ; 0        ; 0        ;
 ; clk_40_gen:c|clk_out        ; shift_sampler:s|sample_flag ; 0        ; 0        ; 720      ; 0        ;
@@ -535,7 +537,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 113   ; 113  ;
+; Unconstrained Input Port Paths  ; 88    ; 88   ;
 ; Unconstrained Output Ports      ; 6     ; 6    ;
 ; Unconstrained Output Port Paths ; 6     ; 6    ;
 +---------------------------------+-------+------+
@@ -604,7 +606,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 09 16:24:12 2019
+    Info: Processing started: Tue Apr 16 00:22:28 2019
 Info: Command: quartus_sta CWRU_Transceiver_RX -c CWRU_Transceiver_RX
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not exist in design
@@ -633,7 +635,7 @@ Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not 
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE1_SOC -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SOC -section_id Top was ignored
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): The Timing Analyzer is analyzing 6 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
@@ -649,108 +651,108 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.909
+Info (332146): Worst-case setup slack is -4.412
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.909            -610.553 clk_40_gen:c|clk_out 
-    Info (332119):    -5.039             -41.974 CLOCK_50 
-    Info (332119):    -3.567             -27.467 shift_sampler:s|sample_flag 
-Info (332146): Worst-case hold slack is 0.407
+    Info (332119):    -4.412             -41.772 CLOCK_50 
+    Info (332119):    -3.876            -302.569 clk_40_gen:c|clk_out 
+    Info (332119):    -3.608             -26.901 shift_sampler:s|sample_flag 
+Info (332146): Worst-case hold slack is 0.316
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.407               0.000 clk_40_gen:c|clk_out 
-    Info (332119):     0.464               0.000 shift_sampler:s|sample_flag 
-    Info (332119):     0.615               0.000 CLOCK_50 
+    Info (332119):     0.316               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.377               0.000 clk_40_gen:c|clk_out 
+    Info (332119):     0.702               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.394
+Info (332146): Worst-case minimum pulse width slack is -0.483
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -66.207 clk_40_gen:c|clk_out 
-    Info (332119):    -0.394              -6.972 CLOCK_50 
-    Info (332119):    -0.394              -4.421 shift_sampler:s|sample_flag 
+    Info (332119):    -0.483              -7.115 CLOCK_50 
+    Info (332119):    -0.394             -49.633 clk_40_gen:c|clk_out 
+    Info (332119):    -0.394              -4.489 shift_sampler:s|sample_flag 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.944
+Info (332146): Worst-case setup slack is -4.627
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.944            -609.103 clk_40_gen:c|clk_out 
-    Info (332119):    -5.254             -42.866 CLOCK_50 
-    Info (332119):    -3.650             -27.868 shift_sampler:s|sample_flag 
-Info (332146): Worst-case hold slack is 0.376
+    Info (332119):    -4.627             -42.630 CLOCK_50 
+    Info (332119):    -3.871            -299.831 clk_40_gen:c|clk_out 
+    Info (332119):    -3.605             -26.982 shift_sampler:s|sample_flag 
+Info (332146): Worst-case hold slack is 0.351
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.376               0.000 clk_40_gen:c|clk_out 
-    Info (332119):     0.517               0.000 shift_sampler:s|sample_flag 
-    Info (332119):     0.589               0.000 CLOCK_50 
+    Info (332119):     0.351               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.418               0.000 clk_40_gen:c|clk_out 
+    Info (332119):     0.555               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.410
+Info (332146): Worst-case minimum pulse width slack is -0.500
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.410              -7.463 CLOCK_50 
-    Info (332119):    -0.394             -64.566 clk_40_gen:c|clk_out 
-    Info (332119):    -0.394              -4.279 shift_sampler:s|sample_flag 
+    Info (332119):    -0.500              -7.654 CLOCK_50 
+    Info (332119):    -0.394             -48.213 clk_40_gen:c|clk_out 
+    Info (332119):    -0.394              -4.257 shift_sampler:s|sample_flag 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.032
+Info (332146): Worst-case setup slack is -3.227
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.032             -19.062 CLOCK_50 
-    Info (332119):    -3.188            -317.190 clk_40_gen:c|clk_out 
-    Info (332119):    -1.920             -13.790 shift_sampler:s|sample_flag 
-Info (332146): Worst-case hold slack is 0.093
+    Info (332119):    -3.227             -18.113 CLOCK_50 
+    Info (332119):    -2.010            -152.727 clk_40_gen:c|clk_out 
+    Info (332119):    -1.913             -13.914 shift_sampler:s|sample_flag 
+Info (332146): Worst-case hold slack is 0.022
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.093               0.000 clk_40_gen:c|clk_out 
-    Info (332119):     0.178               0.000 shift_sampler:s|sample_flag 
-    Info (332119):     0.332               0.000 CLOCK_50 
+    Info (332119):     0.022               0.000 clk_40_gen:c|clk_out 
+    Info (332119):     0.131               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.528               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.438
+Info (332146): Worst-case minimum pulse width slack is -0.523
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.438              -1.590 CLOCK_50 
-    Info (332119):    -0.009              -0.009 shift_sampler:s|sample_flag 
-    Info (332119):     0.000               0.000 clk_40_gen:c|clk_out 
+    Info (332119):    -0.523              -1.693 CLOCK_50 
+    Info (332119):     0.002               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.026               0.000 clk_40_gen:c|clk_out 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.388
+Info (332146): Worst-case setup slack is -2.707
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.388             -17.193 CLOCK_50 
-    Info (332119):    -2.844            -285.505 clk_40_gen:c|clk_out 
-    Info (332119):    -1.777             -12.930 shift_sampler:s|sample_flag 
-Info (332146): Worst-case hold slack is 0.062
+    Info (332119):    -2.707             -16.118 CLOCK_50 
+    Info (332119):    -1.782             -13.033 shift_sampler:s|sample_flag 
+    Info (332119):    -1.780            -135.726 clk_40_gen:c|clk_out 
+Info (332146): Worst-case hold slack is 0.018
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.062               0.000 clk_40_gen:c|clk_out 
-    Info (332119):     0.183               0.000 shift_sampler:s|sample_flag 
-    Info (332119):     0.298               0.000 CLOCK_50 
+    Info (332119):     0.018               0.000 clk_40_gen:c|clk_out 
+    Info (332119):     0.145               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.378               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.464
+Info (332146): Worst-case minimum pulse width slack is -0.510
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.464              -1.614 CLOCK_50 
-    Info (332119):     0.002               0.000 shift_sampler:s|sample_flag 
-    Info (332119):     0.040               0.000 clk_40_gen:c|clk_out 
+    Info (332119):    -0.510              -1.677 CLOCK_50 
+    Info (332119):     0.024               0.000 shift_sampler:s|sample_flag 
+    Info (332119):     0.059               0.000 clk_40_gen:c|clk_out 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 5135 megabytes
-    Info: Processing ended: Tue Apr 09 16:24:30 2019
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 5155 megabytes
+    Info: Processing ended: Tue Apr 16 00:22:34 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CWRU_Transceiver_RX
-Tue Apr 09 16:22:02 2019
+Tue Apr 16 00:21:39 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -45,13 +45,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 09 16:22:02 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 16 00:21:38 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CWRU_Transceiver_RX                         ;
 ; Top-level Entity Name           ; CWRU_Transceiver_RX                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 134                                         ;
+; Total registers                 ; 109                                         ;
 ; Total pins                      ; 44                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -158,28 +158,29 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; src/shift_sampler.v              ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v       ;         ;
-; src/CWRU_Transceiver_RX.v        ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v ;         ;
-; src/clk_40_gen.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v          ;         ;
-; src/HEX_display.v                ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v         ;         ;
-; src/sample_decoder.v             ; yes             ; User Verilog HDL File  ; C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v      ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; src/shift_sampler.v              ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v       ;         ;
+; src/sample_decoder.v             ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v      ;         ;
+; src/HEX_display.v                ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v         ;         ;
+; src/CWRU_Transceiver_RX.v        ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v ;         ;
+; src/clk_40_gen.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v          ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------+
@@ -187,25 +188,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimate of Logic utilization (ALMs needed) ; 225              ;
+; Estimate of Logic utilization (ALMs needed) ; 154              ;
 ;                                             ;                  ;
-; Combinational ALUT usage for logic          ; 334              ;
+; Combinational ALUT usage for logic          ; 259              ;
 ;     -- 7 input functions                    ; 0                ;
-;     -- 6 input functions                    ; 115              ;
-;     -- 5 input functions                    ; 83               ;
-;     -- 4 input functions                    ; 22               ;
-;     -- <=3 input functions                  ; 114              ;
+;     -- 6 input functions                    ; 48               ;
+;     -- 5 input functions                    ; 98               ;
+;     -- 4 input functions                    ; 32               ;
+;     -- <=3 input functions                  ; 81               ;
 ;                                             ;                  ;
-; Dedicated logic registers                   ; 134              ;
+; Dedicated logic registers                   ; 109              ;
 ;                                             ;                  ;
 ; I/O pins                                    ; 44               ;
 ;                                             ;                  ;
 ; Total DSP Blocks                            ; 0                ;
 ;                                             ;                  ;
 ; Maximum fan-out node                        ; GPIO_1[15]~input ;
-; Maximum fan-out                             ; 117              ;
-; Total fan-out                               ; 1802             ;
-; Average fan-out                             ; 3.24             ;
+; Maximum fan-out                             ; 98               ;
+; Total fan-out                               ; 1370             ;
+; Average fan-out                             ; 3.00             ;
 +---------------------------------------------+------------------+
 
 
@@ -214,11 +215,11 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name         ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
-; |CWRU_Transceiver_RX       ; 334 (0)             ; 134 (0)                   ; 0                 ; 0          ; 44   ; 0            ; |CWRU_Transceiver_RX                  ; CWRU_Transceiver_RX ; work         ;
+; |CWRU_Transceiver_RX       ; 259 (0)             ; 109 (0)                   ; 0                 ; 0          ; 44   ; 0            ; |CWRU_Transceiver_RX                  ; CWRU_Transceiver_RX ; work         ;
 ;    |HEX_display:h|         ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|HEX_display:h    ; HEX_display         ; work         ;
 ;    |clk_40_gen:c|          ; 17 (17)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|clk_40_gen:c     ; clk_40_gen          ; work         ;
 ;    |sample_decoder:d|      ; 88 (88)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|sample_decoder:d ; sample_decoder      ; work         ;
-;    |shift_sampler:s|       ; 212 (212)           ; 113 (113)                 ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|shift_sampler:s  ; shift_sampler       ; work         ;
+;    |shift_sampler:s|       ; 137 (137)           ; 88 (88)                   ; 0                 ; 0          ; 0    ; 0            ; |CWRU_Transceiver_RX|shift_sampler:s  ; shift_sampler       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -244,8 +245,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 134   ;
-; Number of registers using Synchronous Clear  ; 40    ;
+; Total registers                              ; 109   ;
+; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -259,11 +260,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; shift_sampler:s|counter[1]             ; 2       ;
-; shift_sampler:s|counter[0]             ; 2       ;
-; shift_sampler:s|counter[6]             ; 3       ;
-; shift_sampler:s|counter[3]             ; 4       ;
-; shift_sampler:s|counter[2]             ; 3       ;
+; shift_sampler:s|counter[0]             ; 41      ;
+; shift_sampler:s|counter[6]             ; 13      ;
+; shift_sampler:s|counter[3]             ; 26      ;
+; shift_sampler:s|counter[2]             ; 26      ;
+; shift_sampler:s|counter[1]             ; 26      ;
 ; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
@@ -282,26 +283,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 134                         ;
-;     SCLR              ; 40                          ;
-;     plain             ; 94                          ;
-; arriav_lcell_comb     ; 335                         ;
-;     arith             ; 76                          ;
+; arriav_ff             ; 109                         ;
+;     SCLR              ; 12                          ;
+;     plain             ; 97                          ;
+; arriav_lcell_comb     ; 260                         ;
+;     arith             ; 51                          ;
 ;         0 data inputs ; 8                           ;
-;         1 data inputs ; 44                          ;
+;         1 data inputs ; 19                          ;
 ;         2 data inputs ; 16                          ;
 ;         5 data inputs ; 8                           ;
-;     normal            ; 259                         ;
+;     normal            ; 209                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 22                          ;
-;         5 data inputs ; 75                          ;
-;         6 data inputs ; 115                         ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 32                          ;
+;         5 data inputs ; 90                          ;
+;         6 data inputs ; 48                          ;
 ; boundary_port         ; 44                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.57                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -310,7 +311,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -320,37 +321,37 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 09 16:21:42 2019
+    Info: Processing started: Tue Apr 16 00:21:27 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CWRU_Transceiver_RX -c CWRU_Transceiver_RX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/shift_sampler.v
-    Info (12023): Found entity 1: shift_sampler File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_rx.v
-    Info (12023): Found entity 1: CWRU_Transceiver_RX File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_rx_tb.v
-    Info (12023): Found entity 1: CWRU_Transceiver_RX_tb File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file src/clk_40_gen.v
-    Info (12023): Found entity 1: clk_40_gen File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file src/hex_display.v
-    Info (12023): Found entity 1: HEX_display File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 1
+    Info (12023): Found entity 1: shift_sampler File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/shift_sampler.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/sample_decoder.v
-    Info (12023): Found entity 1: sample_decoder File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v Line: 1
+    Info (12023): Found entity 1: sample_decoder File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/sample_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/hex_display.v
+    Info (12023): Found entity 1: HEX_display File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_rx_tb.v
+    Info (12023): Found entity 1: CWRU_Transceiver_RX_tb File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file src/cwru_transceiver_rx.v
+    Info (12023): Found entity 1: CWRU_Transceiver_RX File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/clk_40_gen.v
+    Info (12023): Found entity 1: clk_40_gen File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/clk_40_gen.v Line: 1
 Info (12127): Elaborating entity "CWRU_Transceiver_RX" for the top level hierarchy
-Info (12128): Elaborating entity "clk_40_gen" for hierarchy "clk_40_gen:c" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 11
-Info (12128): Elaborating entity "shift_sampler" for hierarchy "shift_sampler:s" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 12
-Info (12128): Elaborating entity "sample_decoder" for hierarchy "sample_decoder:d" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 13
-Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:h" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 14
-Warning (10240): Verilog HDL Always Construct warning at HEX_display.v(6): inferring latch(es) for variable "HEX0", which holds its previous value in one or more paths through the always construct File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 6
-Info (10041): Inferred latch for "HEX0[0]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[1]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[2]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[3]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[4]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[5]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
-Info (10041): Inferred latch for "HEX0[6]" at HEX_display.v(10) File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (12128): Elaborating entity "clk_40_gen" for hierarchy "clk_40_gen:c" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 11
+Info (12128): Elaborating entity "shift_sampler" for hierarchy "shift_sampler:s" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 12
+Info (12128): Elaborating entity "sample_decoder" for hierarchy "sample_decoder:d" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 13
+Info (12128): Elaborating entity "HEX_display" for hierarchy "HEX_display:h" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 14
+Warning (10240): Verilog HDL Always Construct warning at HEX_display.v(6): inferring latch(es) for variable "HEX0", which holds its previous value in one or more paths through the always construct File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 6
+Info (10041): Inferred latch for "HEX0[0]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[1]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[2]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[3]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[4]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[5]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
+Info (10041): Inferred latch for "HEX0[6]" at HEX_display.v(10) File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/HEX_display.v Line: 10
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 5
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SOC -section_id Top was ignored
@@ -380,49 +381,49 @@ Warning (20013): Ignored 24 assignments for entity "DE1_SOC" -- entity does not 
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 35 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "GPIO_1[0]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[1]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[2]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[3]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[4]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[5]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[6]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[7]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[8]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[9]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[10]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[11]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[12]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[13]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[14]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[16]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[17]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[18]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[19]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[20]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[21]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[22]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[23]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[24]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[25]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[26]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[27]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[28]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[29]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[30]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[31]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[32]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[33]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[34]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_1[35]" File: C:/Users/ryanl/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
-Info (21057): Implemented 396 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "GPIO_1[0]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[1]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[2]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[3]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[4]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[5]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[6]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[7]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[8]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[9]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[10]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[11]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[12]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[13]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[14]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[16]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[17]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[18]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[19]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[20]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[21]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[22]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[23]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[24]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[25]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[26]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[27]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[28]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[29]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[30]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[31]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[32]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[33]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[34]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+    Warning (15610): No output dependent on input pin "GPIO_1[35]" File: C:/Users/Richard/OneDrive/Documents/GitHub/CWRU_Transceiver/CWRU_Transceiver_RX/src/CWRU_Transceiver_RX.v Line: 3
+Info (21057): Implemented 317 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 37 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 352 logic cells
+    Info (21061): Implemented 273 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Tue Apr 09 16:22:02 2019
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Tue Apr 16 00:21:39 2019
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:22
 
 

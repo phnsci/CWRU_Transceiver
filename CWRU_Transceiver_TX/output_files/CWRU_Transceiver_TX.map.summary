@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Apr 09 16:10:43 2019
+Analysis & Synthesis Status : Successful - Tue Apr 16 00:15:09 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CWRU_Transceiver_TX
 Top-level Entity Name : CWRU_Transceiver_TX
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 62
-Total pins : 48
+Total registers : 71
+Total pins : 58
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

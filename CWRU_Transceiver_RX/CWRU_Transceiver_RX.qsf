@@ -1,54 +1,4 @@
-# -------------------------------------------------------------------------- #
-#
-# Copyright (C) 2018  Intel Corporation. All rights reserved.
-# Your use of Intel Corporation's design tools, logic functions 
-# and other software and tools, and its AMPP partner logic 
-# functions, and any output files from any of the foregoing 
-# (including device programming or simulation files), and any 
-# associated documentation or information are expressly subject 
-# to the terms and conditions of the Intel Program License 
-# Subscription Agreement, the Intel Quartus Prime License Agreement,
-# the Intel FPGA IP License Agreement, or other applicable license
-# agreement, including, without limitation, that your use is for
-# the sole purpose of programming logic devices manufactured by
-# Intel and sold by Intel or its authorized distributors.  Please
-# refer to the applicable agreement for further details.
-#
-# -------------------------------------------------------------------------- #
-#
-# Quartus Prime
-# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-# Date created = 12:50:28  March 29, 2019
-#
-# -------------------------------------------------------------------------- #
-#
-# Notes:
-#
-# 1) The default values for assignments are stored in the file:
-#		CWRU_Transceiver_RX_assignment_defaults.qdf
-#    If this file doesn't exist, see file:
-#		assignment_defaults.qdf
-#
-# 2) Altera recommends that you do not modify this file. This
-#    file is updated automatically by the Quartus Prime software
-#    and any changes you make may be lost or overwritten.
-#
-# -------------------------------------------------------------------------- #
-
-
-set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY CWRU_Transceiver_RX
-set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:50:28  MARCH 29, 2019"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
-set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
-set_global_assignment -name DEVICE_FILTER_PIN_COUNT 896
-set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
-set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SOC -section_id Top
 set_location_assignment PIN_AF14 -to CLOCK_50
 set_location_assignment PIN_AB17 -to GPIO_1[0]
 set_location_assignment PIN_AA21 -to GPIO_1[1]
@@ -86,35 +36,49 @@ set_location_assignment PIN_AE22 -to GPIO_1[32]
 set_location_assignment PIN_AD21 -to GPIO_1[33]
 set_location_assignment PIN_AA20 -to GPIO_1[34]
 set_location_assignment PIN_AC22 -to GPIO_1[35]
+set_location_assignment PIN_AE26 -to HEX0[0]
+set_location_assignment PIN_AE27 -to HEX0[1]
+set_location_assignment PIN_AE28 -to HEX0[2]
+set_location_assignment PIN_AG27 -to HEX0[3]
+set_location_assignment PIN_AF28 -to HEX0[4]
+set_location_assignment PIN_AG28 -to HEX0[5]
+set_location_assignment PIN_AH28 -to HEX0[6]
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY CWRU_Transceiver_RX
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:10:08  MARCH 25, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE1_SOC -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE1_SOC -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity DE1_SOC -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SOC -section_id Top
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 896
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ns" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_location_assignment PIN_AH28 -to HEX0[6]
-set_location_assignment PIN_AG28 -to HEX0[5]
-set_location_assignment PIN_AF28 -to HEX0[4]
-set_location_assignment PIN_AG27 -to HEX0[3]
-set_location_assignment PIN_AE28 -to HEX0[2]
-set_location_assignment PIN_AE27 -to HEX0[1]
-set_location_assignment PIN_AE26 -to HEX0[0]
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH CWRU_Transceiver_RX_tb -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity CWRU_Transceiver_RX -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity CWRU_Transceiver_RX -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity CWRU_Transceiver_RX -section_id Top
+
+set_global_assignment -name VERILOG_FILE src/shift_sampler.v
+set_global_assignment -name VERILOG_FILE src/sample_decoder.v
+set_global_assignment -name VERILOG_FILE src/HEX_display.v
+set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_RX_tb.v
+set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_RX.v
+set_global_assignment -name VERILOG_FILE src/clk_40_gen.v
+set_global_assignment -name BOARD "DE1-SoC Board"
 set_global_assignment -name EDA_TEST_BENCH_NAME CWRU_Transceiver_RX_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CWRU_Transceiver_RX_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CWRU_Transceiver_RX_tb -section_id CWRU_Transceiver_RX_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE src/CWRU_Transceiver_RX_tb.v -section_id CWRU_Transceiver_RX_tb
-set_global_assignment -name VERILOG_FILE src/shift_sampler.v
-set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_RX.v
-set_global_assignment -name VERILOG_FILE src/CWRU_Transceiver_RX_tb.v
-set_global_assignment -name VERILOG_FILE src/clk_40_gen.v
-set_global_assignment -name VERILOG_FILE src/HEX_display.v
-set_global_assignment -name VERILOG_FILE src/sample_decoder.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
