@@ -68,7 +68,7 @@ initial begin
 	#1250000 KEY = 4'b1110; // test KEY[0]
 	#250000 KEY = 4'b1111;
 	
-	#2500000 $stop;
+	#25000000 $stop;
 end
 
 

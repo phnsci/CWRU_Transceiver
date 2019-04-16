@@ -12,12 +12,12 @@ wire callsign_bit;
 
 always @(clk_4) // must be sensitive to both edges to output 4kHz clock properly
 begin
-	if (SW[0] == 0)
-		GPIO_1[17] = callsign_bit; // output operator callsign
-	else if (SW[1] == 0)
-		GPIO_1[17] = clk_4; // output generated clock
-	else
+	if (KEY[0] == 0 || KEY[1] == 0 || KEY[2] == 0 || KEY[3] == 0)
 		GPIO_1[17] = code_MSB; // output encoded button signal
+	else if (SW[0] == 1)
+		GPIO_1[17] = callsign_bit; // output operator callsign
+	else if (SW[1] == 1)
+		GPIO_1[17] = clk_4; // output generated clock
 end
 
 clk_4_gen c(CLOCK_50, clk_4); // to generate 4kHz clock using 50MHz clock
